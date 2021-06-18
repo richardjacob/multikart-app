@@ -1,7 +1,5 @@
 // utils scss files
 @import "utils/variables";
-@import "utils/mixins/common";
-@import "utils/mixins/breakpoints";
 
 // base scss files
 @import "base/reset";
@@ -10,42 +8,15 @@
 // components scss files
 @import "components/button";
 @import "components/form";
-@import "components/price-range";
-@import "components/label";
-@import "components/pagination";
 @import "components/ratio";
-@import "components/card";
 @import "components/slider";
 @import "components/dropdown";
 @import "components/tab";
 
 // layout scss files
 @import "layout/header";
-@import "layout/breadcrumb";
-@import "layout/footer";
-@import "layout/nav";
-@import "layout/loader";
-@import "layout/shop-filter";
-@import "layout/category_menu";
-@import "layout/home_slider";
-@import "layout/service";
-@import "layout/banner";
-@import "layout/deal";
-@import "layout/product";
-@import "layout/modal";
-@import "layout/tap_top";
-
 // pages
-@import "pages/login";
-@import "pages/shop";
-@import "pages/product";
-@import "pages/vendor";
-@import "pages/cart";
-@import "pages/checkout";
-@import "pages/order-confirmation";
-@import "pages/order-tracking";
-@import "pages/reward";
+
 
 // themes scss files
-@import "themes/responsive";
 @import "themes/rtl";

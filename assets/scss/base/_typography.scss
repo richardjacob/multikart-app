@@ -3,7 +3,7 @@
 ==========================*/
 
 body {
-    font-family: $open-sans, $sans-serif;
+  font-family: Lato, sans-serif;
     position: relative;
     font-size: 14px;
     margin: 0;
@@ -34,7 +34,6 @@ body {
   }
 
   a {
-      color: $black;
       transition: 0.5s ease;
       text-decoration: none;
       &:hover {
@@ -44,19 +43,7 @@ body {
       &:focus {
           outline: none;
       }
-      &.font-light {
-        &:hover {
-          color: $theme-blue;
-        }
-      }
   }
-
-  .btn-close {
-      &:focus {
-          box-shadow: none;
-      }
-  }
-
 
   :focus {
       outline: none;
@@ -70,49 +57,47 @@ body {
   }
 
   h1 {
-    font-size: calc(24px + (28 - 24) * ((100vw - 320px) / (1920 - 320)));
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
     line-height: 1.1;
     text-transform: capitalize;
     margin: 0;
   }
 
   h2 {
-    font-size: calc(20px + (22 - 20) * ((100vw - 320px) / (1920 - 320)));
-    font-weight: 600;
+    font-size: 16px;
     line-height: 1.3;
-    text-transform: capitalize;
     margin: 0;
   }
 
   h3 {
-    font-size: calc(18px + (20 - 18) * ((100vw - 320px) / (1920 - 320)));
+    font-size: 15px;
     font-weight: 600;
     line-height: 1.2;
     margin: 0;
   }
 
   h4 {
-    font-size: calc(17px + (18 - 17) * ((100vw - 320px) / (1920 - 320)));
+    font-size: 14px;
     line-height: 1.3;
     margin: 0;
   }
 
   h5 {
-    font-size: calc(15px + (16 - 15) * ((100vw - 320px) / (1920 - 320)));
+    font-size: 13px;
     line-height: 1.3;
     margin: 0;
   }
 
   h6 {
-    font-size: calc(13px + (14 - 13) * ((100vw - 320px) / (1920 - 320)));
+    font-size: 12px;
     line-height: 1.2;
     font-weight: 500;
     margin: 0;
   }
 
   span {
-      font-size: 13px;
+      font-size: 12px;
   }
 
   section, .section-t-space {
@@ -120,29 +105,4 @@ body {
   }
   .section-b-space {
     padding-bottom: 30px;
-  }
-
-  .section-lgt-space {
-    padding-top: calc(30px + (70 - 30) * ((100vw - 320px) / (1920 - 320)));;
-  }
-
-  .section-lgb-space {
-    padding-bottom: calc(30px + (70 - 30) * ((100vw - 320px) / (1920 - 320)));;
-  }
-
-  .txt-line {
-    color: rgba($black, 0.7);
-    text-decoration: line-through;
-  }
-
-  .height-0 {
-    height: 0;
-  }
-
-  .font-normal {
-    font-size: 14px !important;
-  }
-
-  .text-decoration-underline {
-    text-decoration: underline;
   }

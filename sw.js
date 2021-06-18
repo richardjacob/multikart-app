@@ -5,6 +5,7 @@ var filesToCache = [
   'https://fonts.googleapis.com/css?family=Lato:300,400,700,900',
   './assets/js/jquery-3.3.1.min.js',
   './assets/js/bootstrap.bundle.min.js',
+  './assets/js/feather.min.js',
   './assets/js/slick.js',
   './assets/js/script.js',
   './assets/css/vendors/bootstrap.css',

@@ -19,7 +19,7 @@
         z-index: 1;
         width: 0.55rem;
         height: 0.55rem;
-        background: $theme-blue;
+        background: $theme-color;
         border-radius: 50%;
         [dir="rtl"] & {
             left: unset;
@@ -46,7 +46,7 @@
             transform: scale(1, 1);
         }
         &:after {
-            border: 1px solid $theme-blue;
+            border: 1px solid $theme-color;
         }
     }
 }
@@ -93,8 +93,8 @@
         &:checked {
             +label {
                 &:before {
-                    background-color: $theme-blue;
-                    border-color: $theme-blue;
+                    background-color: $theme-color;
+                    border-color: $theme-color;
                     color: #fff;
                 }
             }
@@ -102,8 +102,8 @@
                 _ label {
                     &:before {
                         transform: scale(1);
-                        background-color: rgba($theme-blue, 0.2);
-                        border-color: rgba($theme-blue, 0.2);
+                        background-color: rgba($theme-color, 0.2);
+                        border-color: rgba($theme-color, 0.2);
                     }
                 }
             }

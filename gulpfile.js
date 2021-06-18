@@ -21,7 +21,7 @@ function watch() {
   browserSync.init({
     proxy: 'localhost/multikart-app/index.html'
   });
-  gulp.watch('assets/scss/*.scss', style);
+  gulp.watch('assets/scss/**/*.scss', style);
   gulp.watch('*.html').on('change', browserSync.reload);
   gulp.watch('assets/css/*.css').on('change', browserSync.reload);
 }
