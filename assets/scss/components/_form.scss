@@ -1,0 +1,120 @@
+/*=====================
+    form CSS start
+==========================*/
+
+.radio_animated {
+    position: relative;
+    margin: 0 1rem 0 0;
+    [dir="rtl"] & {
+        margin: 0 0 0 1rem;
+    }
+    cursor: pointer;
+    &:before {
+        transition: transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+        transform: scale(0, 0);
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 0.125rem;
+        z-index: 1;
+        width: 0.55rem;
+        height: 0.55rem;
+        background: $theme-blue;
+        border-radius: 50%;
+        [dir="rtl"] & {
+            left: unset;
+            right: 0.125rem;
+        }
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -0.125rem;
+        width: 1.05rem;
+        height: 1.05rem;
+        background: $white;
+        border: 1px solid $border-color;
+        border-radius: 50%;
+        [dir="rtl"] & {
+            left: unset;
+            right: -0.125rem;
+        }
+    }
+    &:checked {
+        &:before {
+            transform: scale(1, 1);
+        }
+        &:after {
+            border: 1px solid $theme-blue;
+        }
+    }
+}
+
+.checkbox_animated {
+    padding-left: 0;
+    [dir="rtl"] & {
+        padding-right: 0;
+    }
+    input[type="checkbox"] {
+        display: none;
+        +label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            &:before {
+                content: "\2714";
+                border: 1px solid #c2c2c2;
+                border-radius: 3px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 16px;
+                height: 16px;
+                padding-left: 0;
+                padding-bottom: 0;
+                margin-right: 10px;
+                vertical-align: bottom;
+                color: transparent;
+                transition: 0.2s;
+                line-height: 1;
+                [dir="rtl"] & {
+                    padding-right: 0;
+                    margin-right: 0;
+                    margin-left: 10px;
+                }
+            }
+            &:active {
+                &:before {
+                    transform: scale(0);
+                }
+            }
+        }
+        &:checked {
+            +label {
+                &:before {
+                    background-color: $theme-blue;
+                    border-color: $theme-blue;
+                    color: #fff;
+                }
+            }
+            &:disabled {
+                _ label {
+                    &:before {
+                        transform: scale(1);
+                        background-color: rgba($theme-blue, 0.2);
+                        border-color: rgba($theme-blue, 0.2);
+                    }
+                }
+            }
+        }
+        &:disabled {
+            _ label {
+                &:before {
+                    transform: scale(1);
+                    border-color: #aaa;
+                }
+            }
+        }
+    }
+}

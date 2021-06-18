@@ -1,0 +1,33 @@
+/*=====================
+    Breadcrumb CSS start
+==========================*/
+
+.breadcrumb-section {
+    box-shadow: inset 0px 5px 8px rgba(239, 239, 239, 0.49);
+    .breadcrumb {
+        background-color: transparent;
+        padding: 20px 0;
+        margin-bottom: 0;
+        a {
+            color: $theme-blue;
+        }
+    }
+    .breadcrumb-item {
+        &.active {
+            color: $font-dark;
+        }
+        + .breadcrumb-item {
+            &:before {
+                color: $font-dark;
+            }
+        }
+    }
+}
+
+@include max-mq(xs) {
+    .breadcrumb-section {
+        .breadcrumb {
+            padding: 15px 0;
+        }
+    }
+}

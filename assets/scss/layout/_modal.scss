@@ -1,0 +1,399 @@
+/*=====================
+    Modal CSS start
+==========================*/
+
+// quick view modal
+.quick-view-section {
+    padding: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)))
+        calc(5px + (25 - 5) * ((100vw - 320px) / (1920 - 320)));
+    .quick-content {
+        [dir="rtl"] & {
+            text-align: right;
+        }
+        span {
+            font-size: 14px;
+        }
+        h3 {
+            font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)));
+            color: $black;
+            margin-bottom: 6px;
+        }
+        .product-detail {
+            display: flex;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $border-color;
+            li {
+                font-size: 14px;
+                color: $font-light;
+            }
+            > li {
+                + li {
+                    margin-left: 8px;
+                    padding-left: 8px;
+                    border-left: 1px solid #ddd;
+                    [dir="rtl"] & {
+                        margin-left: unset;
+                        padding-left: unset;
+                        margin-right: 8px;
+                        padding-right: 8px;
+                        border-left: none;
+                        border-right: 1px solid #ddd;
+                    }
+                }
+            }
+            .rating-sec {
+                display: flex;
+                align-items: center;
+            }
+        }
+        .description-sec {
+            padding-top: 40px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid $border-color;
+            .price-details {
+                font-size: 24px;
+                margin-bottom: 12px;
+            }
+            ul {
+                padding-left: 20px;
+                [dir="rtl"] & {
+                    padding-right: 20px;
+                    padding-left: unset;
+                }
+                li {
+                    list-style-type: square;
+                    display: list-item;
+                    color: $font-light;
+                }
+            }
+        }
+        .qty-counter {
+            display: flex;
+            align-items: center;
+            padding-top: 20px;
+            .input-group {
+                border: 1px solid #dddddd;
+                border-radius: 5px;
+                width: 150px;
+            }
+            .form-control {
+                border: 0;
+                text-align: center;
+                font-weight: 600;
+            }
+        }
+        .button-group {
+            display: flex;
+            align-items: center;
+            padding-top: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid $border-color;
+            .btn {
+                width: 34%;
+                padding: 10px 16px;
+            }
+            a {
+                + a {
+                    margin-left: 10px;
+                    [dir="rtl"] & {
+                        margin-right: 10px;
+                        margin-left: unset;
+                    }
+                }
+            }
+            .icon-font {
+                span {
+                    font-size: 20px;
+                    color: $font-light;
+                }
+            }
+        }
+        .social-icons {
+            padding-top: 12px;
+        }
+    }
+    .dot-light {
+        .slick-dots {
+            position: relative;
+            bottom: 0;
+        }
+    }
+    .arrow-light {
+        .slick-next {
+            right: 5px;
+            [dir="rtl"] & {
+                left: 5px;
+                right: unset;
+            }
+        }
+        .slick-prev {
+            left: 5px;
+            [dir="rtl"] & {
+                left: unset;
+                right: 5px;
+            }
+        }
+    }
+    .quick-view-image {
+        position: relative;
+        .label-product {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: $theme-green;
+            border-radius: 5px;
+            padding: 5px 7px;
+            [dir="rtl"] & {
+                left: unset;
+                right: 0;
+            }
+            span {
+                display: block;
+                color: $white;
+                font-size: 14px;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+// add to cart modal
+.addtocart-section {
+    padding: 22px 8px;
+    .success-msg {
+        padding: 20px;
+        background-color: #2f8933;
+        color: $white;
+        border-radius: 4px;
+        display: inline-block;
+        margin-bottom: 30px;
+        h6 {
+            a {
+                color: $white;
+                text-decoration: underline;
+            }
+        }
+    }
+    .custom-bought-sec {
+        .title {
+            font-size: 14px;
+            color: $black;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding-bottom: 14px;
+            border-bottom: 1px solid $border-color;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.full-width-modal {
+    max-width: 90%;
+}
+
+.comparemodal-section {
+    h2 {
+        font-size: 22px;
+        color: $black;
+        margin-bottom: 22px;
+    }
+    .comparemodal-body {
+        padding: 30px;
+        [dir="rtl"] & {
+            text-align: right;
+        }
+        .table {
+            margin-bottom: 0;
+            border: 1px solid #e5e5e5;
+            a.btn {
+                color: $white;
+                &:hover {
+                    color: $theme-blue;
+                }
+            }
+            a {
+                color: $theme-blue;
+            }
+            tr {
+                td {
+                    border-left: 1px solid #e5e5e5;
+                    padding: 15px 18px;
+                    [dir="rtl"] & {
+                        border-right: 1px solid #e5e5e5;
+                        border-left: 0;
+                    }
+                    &:first-child {
+                        min-width: 270px;
+                        border-left: 0;
+                        text-transform: uppercase;
+                        [dir="rtl"] & {
+                            border-right: 0;
+                        }
+                    }
+                }
+            }
+            &.table-striped {
+                tbody {
+                    tr {
+                        &:nth-of-type(odd) {
+                            background-color: transparent;
+                        }
+                        &:nth-of-type(even) {
+                            background-color: #f5f5f5;
+                        }
+                    }
+                }
+            }
+            ul.list-detail {
+                padding-left: 22px;
+                [dir="rtl"] & {
+                    padding-left: 0;
+                    padding-right: 22px;
+                }
+                li {
+                    font-size: 14px;
+                    color: $font-light;
+                    display: list-item;
+                    list-style-type: square;
+                }
+            }
+        }
+        .product-box {
+            .btn-close {
+                right: 0;
+                top: 0;
+                z-index: 1;
+                [dir="rtl"] & {
+                    right: unset;
+                    left: 0;
+                }
+            }
+            .product-image {
+                text-align: center;
+                img {
+                    height: 250px;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .custom-lg {
+        max-width: 1180px;
+    }
+}
+
+@include max-mq(xxl) {
+    .comparemodal-section {
+        .comparemodal-body {
+            .table {
+                tr {
+                    td {
+                        &:first-child {
+                            min-width: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include max-mq(lg) {
+    .quick-view-section {
+        .quick-content {
+            .description-sec {
+                padding-top: 12px;
+            }
+        }
+    }
+    .comparemodal-section {
+        .comparemodal-body {
+            .table {
+                tr {
+                    td {
+                        min-width: 230px;
+                        &:first-child {
+                            min-width: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include max-mq(md) {
+    .quick-content {
+        margin-top: 30px;
+    }
+    .quick-view-section {
+        padding-top: 40px;
+    }
+    .addtocart-section {
+        .success-msg {
+            padding: 10px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@include max-mq(sm) {
+    .quick-view-section {
+        .quick-content {
+            .product-detail {
+                display: block;
+                > li {
+                    display: block;
+                    + li {
+                        padding-left: 0;
+                        margin-left: 0;
+                        border-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include max-mq(xs) {
+    .customized-modal {
+        left: 0;
+        overflow: auto;
+        .modal-dialog {
+            margin: 0;
+            right: 0;
+            left: 0;
+            width: auto;
+            height: unset;
+            position: unset;
+            transform: translate(0, 0) !important;
+            .modal-content {
+                height: auto;
+                padding-bottom: 0;
+                max-height: unset;
+                overflow: unset;
+                border-radius: 0;
+            }
+        }
+    }
+    .full-width-modal {
+        max-width: 100%;
+    }
+}
+
+@include max-mq(3xs) {
+    .quick-view-section {
+        .quick-content {
+            .button-group {
+                .btn {
+                    display: block;
+                    width: auto;
+                }
+            }
+        }
+    }
+}

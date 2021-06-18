@@ -1,0 +1,333 @@
+/*=====================
+    Home slider CSS start
+==========================*/
+
+.light-50 {
+    color: rgba($white, 0.5);
+}
+.home-section {
+    .row {
+        > [class*="col-"] {
+          + [class*="col-"] {
+            margin-top: 12px;
+          }
+        }
+      }
+    .home-slider {
+        color: $white;
+        margin: 0;
+        .slick-slide {
+            > div {
+                margin: 0;
+            }
+        }
+        .home-content {
+            height: 496px;
+            padding: 30px calc(60px + (100 - 60) * ((100vw - 320px) / (1920 - 320)));;
+            display: flex !important;
+            align-items: center;
+            &::before {
+                display: none;
+            }
+            > div {
+                .light-50 {
+                    text-transform: uppercase;
+                }
+            }
+            .shop-content {
+                margin-top: 60px;
+                h4 {
+                    font-weight: 700;
+                }
+                .btn-solid-blue {
+                    &:hover {
+                        color: $white;
+                    }
+                }
+            }
+        }
+        
+    }
+    .home-banner {
+        h4 {
+            text-transform: uppercase;
+        }
+        ul {
+            margin-top: 40px;
+            li {
+                display: block;
+            }
+        }
+        .label {
+            font-size: 12px;
+            span {
+                font-size: 15px;
+                margin-left: -4px;
+                [dir="rtl"] & {
+                    margin-right: -4px;
+                    margin-left: unset;
+                }
+            }
+        }
+    }
+    .ratio2_3 {
+        .bg-size {
+          &:before {
+            padding-top: 62%;
+          }
+        }
+    }
+    .home-last {
+        .ratio2_3 {
+            .bg-size {
+                &:before {
+                    padding-top: 60%;
+                }
+            }
+        }
+    }
+    &.home-sm {
+        .home-slider {
+            .home-content {
+                height: auto;
+                padding: calc(15px + (50 - 15) * ((100vw - 320px) / (1920 - 320))) calc(15px + (90 - 15) * ((100vw - 320px) / (1920 - 320)));
+                .shop-content {
+                    margin-top: calc(6px + (36 - 6) * ((100vw - 320px) / (1920 - 320))) ;
+                }
+            }
+        }
+    }
+    &.home-full {
+        .home-slider {
+            .home-content {
+                height: 60vh;
+                padding: 0;
+            }
+        }
+    }
+}
+.home-banner {
+    position: relative;
+}
+
+// responsive css
+@media (max-width: 1639px) {
+    .home-section {
+        .ratio2_3 {
+            .bg-size {
+                &:before {
+                    padding-top: 32%;
+                }
+            }
+        }
+        .ratio_asos {
+            .bg-size {
+                &:before {
+                    padding-top: 82%;
+                }
+            }
+        }
+        .home-slider {
+            .home-content {
+                height: 590px;
+            }
+        }
+        .col-xxl-3 {
+            padding-right: 0;
+        }
+        .home-last {
+            margin-top: 12px !important;
+            .row {
+                > [class*="col-"] {
+                    + [class*="col-"] {
+                        margin-top: 0;
+                    }
+                }
+                .p-0 {
+                    padding: 0 6px !important;
+                }
+            }
+            .ratio2_3 {
+                .bg-size {
+                    &:before {
+                        padding-top: 35%;
+                    }
+                }
+            }
+        } 
+    }
+}
+
+@include max-mq(lg) { 
+    .home-section {
+        .ratio2_3 {
+            .bg-size {
+                &:before {
+                    padding-top: 52%;
+                }
+            }
+        }
+        .home-last {
+            .ratio2_3 {
+                .bg-size {
+                    &:before {
+                        padding-top: 52%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include max-mq(md) { 
+    .home-section {
+        .home-slider {
+            .home-content {
+                height: 400px;
+                max-height: unset !important;
+            }
+        }
+        .home-right-section {
+            margin-top: 12px !important;
+        }
+        .ratio2_3 {
+            .bg-size {
+                &:before {
+                    padding-top: 32%;
+                }
+            }
+        }
+        .home-last {
+            .ratio2_3 {
+                .bg-size {
+                    &:before {
+                        padding-top: 70%;
+                    }
+                }
+            }
+        }
+        .ratio_asos {
+            .bg-size {
+                &:before {
+                    padding-top: 65%;
+                }
+            }
+        }
+    }
+}
+
+@include max-mq(sm) { 
+    .home-section {
+        .ratio2_3 {
+            .bg-size {
+                &:before {
+                    padding-top: 42%;
+                }
+            }
+        }
+        .home-last {
+            .ratio2_3 {
+                .bg-size {
+                    &:before {
+                        padding-top: 92%;
+                    }
+                }
+            }
+        }
+        .ratio_asos {
+            .bg-size {
+                &:before {
+                    padding-top: 70%;
+                }
+            }
+        }
+    }
+}
+@include max-mq(xs) { 
+    .home-section {
+        .home-slider {
+            .home-content {
+                padding: 30px;
+            }
+            &.arrow-light {
+                .slick-arrow {
+                    display: none !important;
+                }
+            }
+        }
+        .ratio2_3 {
+            .bg-size {
+                &:before {
+                    padding-top: 72%;
+                }
+            }
+        }
+        .home-last {
+            .ratio2_3 {
+                .bg-size {
+                    &:before {
+                        padding-top: 54%;
+                    }
+                }
+            }
+            .row {
+                > [class*="col-"] {
+                    + [class*="col-"] {
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+        .ratio_asos {
+            .bg-size {
+                &:before {
+                    padding-top: 50%;
+                }
+            }
+        }
+    }
+}
+
+@include max-mq(2xs) {
+    .home-section {
+        .home-last {
+            .ratio2_3 {
+                .bg-size {
+                    &:before {
+                        padding-top: 63%;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+@include max-mq(3xs) {
+    .home-section {
+        .home-last {
+            .ratio2_3 {
+                .bg-size {
+                    &:before {
+                        padding-top: 75%;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@include max-mq(4xs) {
+    .home-section {
+        .home-last {
+            .ratio2_3 {
+                .bg-size {
+                    &:before {
+                        padding-top: 80%;
+                    }
+                }
+            }
+        }
+    }
+    
+}

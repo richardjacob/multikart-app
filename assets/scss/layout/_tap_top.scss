@@ -1,0 +1,38 @@
+/*=====================
+    Tap top CSS start
+==========================*/
+.tap-top {
+    position: fixed;
+    width: 34px;
+    height: 34px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    right: 30px;
+    background-color: $black;
+    border-radius: $border-radius;
+    color: $white;
+    font-size: 11px;
+    z-index: 1;
+    cursor: pointer;
+    [dir="rtl"] & {
+        right: unset;
+        left: 30px;
+    }
+    span {
+        vertical-align: text-bottom;
+    }
+    &.top {
+        display: flex;
+        bottom: 30px;
+        transition: all 0.5s ease;
+    }
+}
+
+@media (max-width: 1810px) {
+    .tap-top {
+        &.top {
+            bottom: 70px;
+        }
+    }
+}

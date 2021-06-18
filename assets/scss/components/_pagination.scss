@@ -1,0 +1,31 @@
+/*=====================
+    pagination CSS start
+==========================*/
+.default-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .page-link {
+        color: $black;
+        border-radius: 4px;
+        .lnr {
+            font-size: 12px;
+        }
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    .page-item {
+        &.active {
+            .page-link {
+                background-color: $black;
+                border-color: $black;
+            }
+        }
+    }
+    ul {
+        li {
+            margin: 0 4px;
+        }
+    }
+}

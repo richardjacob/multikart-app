@@ -1,0 +1,86 @@
+/*=====================
+    label CSS start
+==========================*/
+.label {
+    position: relative;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 1px 8px;
+    border-radius: $border-radius;
+    span {
+        vertical-align: middle;
+    }
+    .pb-label {
+        font-weight: 400;
+        position: absolute;
+        bottom: 9px;
+        right: 8px;
+        [dir="rtl"] & {
+            right: unset;
+            left: 8px;
+        }
+    }
+    sup {
+        top: -16px;
+        font-size: 55%;
+        left: -8px;
+        [dir="rtl"] & {
+            left: unset;
+            right: -8px;
+        }
+    }
+}
+
+.font-big {
+    font-size: 37px;
+    line-height: 0.8;
+}
+
+// responsive css
+@include max-mq(xl) { 
+    .font-big {
+        font-size: 25px;
+    }
+    .label {
+        .pb-label {
+            bottom: 7px;
+            right: 5px;
+            font-size: 10px;
+            [dir="rtl"] & {
+                right: unset;
+                left: 5px;
+            }
+        }
+        sup {
+            top: -10px;
+            left: -6px;
+            [dir="rtl"] & {
+                left: unset;
+                right: -6px;
+            }
+        }
+    }
+}
+@include max-mq(xs) {
+    .label {
+        font-size: 11px;
+        sup {
+            top: -8px;
+            left: -4px;
+            [dir="rtl"] & {
+                left: unset;
+                right: -4px;
+            }
+        }
+        .pb-label {
+            bottom: 8px;
+            right: 4px;
+            font-size: 9px;
+            [dir="rtl"] & {
+                right: unset;
+                left: 4px;
+            }
+        }
+    }
+}

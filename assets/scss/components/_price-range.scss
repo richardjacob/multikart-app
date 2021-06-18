@@ -1,0 +1,62 @@
+/*=====================
+    Price range custom 
+==========================*/
+.price-range-section {
+    .irs-from , .irs-to, .irs-single, .irs-max{
+        display: none;
+    }
+    .irs {
+        height: 25px;
+    }
+    .irs-slider {
+        top: -4px;
+        width: 12px;
+        height: 12px;
+        border: 0;
+        background: $theme-blue;
+    }
+    .irs-bar {
+        height: 3px;
+        border: 0;
+        background: $theme-blue;
+        top: 0;
+    }
+    .irs-line {
+        height: 3px;
+        border: none;
+        background: #ddd;
+        top: 0;
+    }
+    .extra-controls {
+        .form-control {
+            width: 30%;
+            text-align: center;
+            color: $black;
+        }
+        .form-group {
+            flex: unset;
+            display: flex;
+        }
+        .divider {
+            display: block;
+            width: 20px;
+            text-align: center;
+        }
+        .btn {
+            padding: 9px 16px;
+            border: 1px solid #ddd;
+            margin-left: 9px;
+            background-color: $bg-light;
+            color: $black;
+            font-weight: 700;
+            [dir="rtl"] & {
+                margin-left: 0;
+                margin-right: 9px;
+            }
+            @include max-mq(xl) {
+                padding: 9px 12px;
+            }
+        }
+    }
+}
+

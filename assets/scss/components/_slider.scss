@@ -1,0 +1,196 @@
+/*=====================
+    Slider CSS start
+==========================*/
+.slick-slider {
+    margin: 0 -5px;
+    .slick-slide {
+        > div {
+            margin: 0 5px;
+        }
+        [dir="rtl"] & {
+            float: left;
+        }
+    }
+}
+.slick-dotted {
+    &.slick-slider {
+        margin-bottom: 0;
+    }
+}
+
+.arrow-light {
+    .slick {
+        &-arrow {
+            width: calc(20px + (34 - 20) * ((100vw - 320px) / (1920 - 320)));
+            height: calc(20px + (34 - 20) * ((100vw - 320px) / (1920 - 320)));
+            background: $white;
+            border-radius: $border-radius;
+            transition: all 0.5s;
+            &::before {
+                font-family: $linear-icon;
+                font-size: 11px;
+                color: $black;
+                font-weight: 900;
+                transition: all 0.5s;
+            }
+            &:hover {
+                background: $theme-blue;
+                transition: all 0.5s;
+                &::before {
+                    color: $white;
+                    transition: all 0.5s;
+                }
+            }
+        }
+        &-prev {
+            left: 15px;
+            z-index: 1;
+            &::before {
+                content: "\e875";
+            }
+            [dir="rtl"] & {
+                left: unset;
+                right: 15px;
+            }
+        }
+        &-next {
+            right: 15px;
+            &::before {
+                content: "\e876";
+            }
+            [dir="rtl"] & {
+                right: unset;
+                left: 15px;
+            }
+        }
+    }
+}
+
+.arrow-border {
+    .slick {
+        &-arrow {
+            width: 28px;
+            height: 28px;
+            border-radius: $border-radius;
+            border: 1px solid $light-90;
+            transition: all 0.5s;
+            &::before {
+                font-family: $linear-icon;
+                font-size: 10px;
+                color: $black;
+                font-weight: 900;
+                transition: all 0.5s;
+            }
+            &:hover {
+                border: 1px solid $theme-blue;
+                transition: all 0.5s;
+                &::before {
+                    color: $theme-blue;
+                    transition: all 0.5s;
+                }
+            }
+        }
+        &-prev {
+            left: -40px;
+            z-index: 1;
+            &::before {
+                content: "\e875";
+            }
+        }
+        &-next {
+            right: -40px;
+            &::before {
+                content: "\e876";
+            }
+        }
+    }
+}
+
+.upper-arrow {
+    .slick-prev {
+        top: calc(-48px + (-68 - -48) * ((100vw - 320px) / (1920 - 320)));
+        right: 10px;
+        left: unset;
+        [dir="rtl"] & {
+            right: unset;
+            left: 10px;
+        }
+    }
+    .slick-next {
+        top: calc(-48px + (-68 - -48) * ((100vw - 320px) / (1920 - 320)));
+        right: -24px;
+        left: unset;
+        [dir="rtl"] & {
+            right: unset;
+            left: -24px;
+        }
+    }
+}
+
+.arrow-inside {
+    &.arrow-border {
+        .slick-prev {
+            left: 20px;
+        }
+        .slick-next {
+            right: 20px;
+        }
+    }
+}
+
+.dot-light {
+    .slick-dots {
+        bottom: 20px;
+        li {
+            width: auto;
+            height: auto;
+            button {
+                width: 8px;
+                height: 8px;
+                border-radius: 100%;
+                background-color: $light-70;
+                &::before {
+                    display: none;
+                }
+            }
+            &.slick-active {
+                button {
+                    background-color: $theme-blue;
+                }
+            }
+        }
+    }
+}
+
+.dot-relative {
+    .slick-dots {
+        position: relative;
+        bottom: 0 !important;
+    }
+}
+
+.no-arrow {
+    .slick-next, .slick-prev {
+        display: none !important;
+    }
+}
+
+// responsive css
+@include max-mq(lg) {
+    .upper-arrow {
+        .slick-prev {
+            right: 15px;
+        }
+        .slick-next {
+            right: -18px;
+        }
+    }
+}
+
+@include max-mq(xs) {
+    .arrow-border {
+        .slick-arrow {
+            display: none !important;            
+        }
+    }
+}

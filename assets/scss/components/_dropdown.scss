@@ -1,0 +1,61 @@
+/*=====================
+    Dropdown CSS start
+==========================*/
+
+%for-animated-hover-box {
+  opacity: 1;
+  transform: translateY(0px);
+  visibility: visible;
+}
+
+.onhover-dropdown {
+  position: relative;
+  a {
+    .lnr {
+      font-size: 10px;
+    }
+  }
+  .onhover-show-div {
+    top: 40px;
+    position: absolute;
+    z-index: 3;
+    background-color: $white;
+    transition: all linear 0.3s;
+    min-width: 120px;
+    @include rtl(text-align, left, right);
+    box-shadow: 0 0 7px 0px rgba($black, 0.1);
+    transform: translateY(30px);
+    opacity: 0;
+    visibility: hidden;
+    right: 0;
+    padding: 20px;
+    [dir="rtl"] & {
+      right: unset;
+      left: 0;
+    }
+
+    li {
+      display: block;
+      + li {
+        margin-top: 5px;
+      }
+    }
+  }
+  &:hover {
+    .onhover-show-div {
+      @extend %for-animated-hover-box;
+    }
+  }
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  background: url(../images/down-arrow.png) no-repeat 95% white;
+  background-size: 10px;
+  [dir="rtl"] &{
+    background: url(../images/down-arrow.png) no-repeat 5% white;
+    background-size: 10px;
+  }
+}

@@ -1,0 +1,132 @@
+/*=====================
+    Button CSS start
+==========================*/
+
+button:focus {
+  outline: none;
+}
+
+.btn {
+  font-weight: 700;
+  font-size: 13px;
+  padding: 6px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:focus,
+  &.focus {
+    outline: none;
+    box-shadow: none;
+  }
+  .lnr {
+    font-size: 9px;
+  }
+  .lnr-chevron-right {
+    margin-right: -2px;
+    margin-bottom: 0 !important;
+    margin-left: 3px;
+    [dir="rtl"] & {
+      margin-left: 0;
+      margin-right: 3px;
+    }
+  }
+}
+
+.btn-outline-blue {
+  color: $theme-blue;
+  background-color: $white;
+  border: 1px solid $theme-blue;
+  position: relative;
+  z-index: 1;
+  &::before {
+    @include pos;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: $theme-blue;
+    transition: all 0.5s;
+    opacity: 0;
+    transform: scale(0, 0);
+    [dir="rtl"] & {
+      right: 0;
+      left: unset;
+    }
+  }
+
+  &:hover {
+    color: $white;
+    &::before {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+  }
+}
+
+.btn-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 0;
+  [dir="rtl"] & {
+    right: unset;
+    left: 10px;
+  }
+  span {
+    font-size: 16px !important;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    padding: 2px;
+  }
+  &.btn-relative {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+}
+
+.btn-outline-grey {
+  color: $black;
+  background-color: $bg-light;
+  border: 1px solid $border-color;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 700;
+  display: inline-block;
+  padding-left: 25px;
+  padding-right: 25px;
+  i {
+    font-size: 16px !important;
+    margin-right: 12px;
+  }
+}
+
+.btn-solid-orange {
+  border-color: #ffae13;
+  background-color: unset;
+  position: relative;
+  z-index: 1;
+  &::before {
+    @include pos;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #ffc339;
+    transition: all 0.5s;
+    opacity: 1;
+    transform: scale(1, 1);
+    [dir="rtl"] & {
+      right: 0;
+      left: unset;
+    }
+  }
+  &:hover {
+    &::before {
+      opacity: 0;
+      transform: scale(0.5, 0.5);
+    }
+  }
+}

@@ -1,0 +1,153 @@
+/*=====================
+    Category menu CSS start
+==========================*/
+.category-mobile {
+    > .row {
+        height: calc(100vh - 133px);
+    }
+    .category-search {
+        padding: 10px 20px;
+        position: relative;
+        border-bottom: 1px solid $light-60;
+        input {
+            width: 100%;
+            padding-right: 30px;
+            [dir="rtl"] & {
+                padding-right: 10px;
+                padding-left: 30px;
+            }
+        }
+        .lnr {
+            position: absolute;
+            right: 32px;
+            top: 24px;
+            [dir="rtl"] & {
+                right: unset;
+                left: 32px;
+            }
+        }
+    }
+    .nav-tabs {
+        background-color: $bg-light;
+        overflow: auto;
+        height: calc(100vh - 133px);
+        li {
+            display: block;
+            text-align: center;
+            width: 100%;
+        }
+        .nav-link {
+            border: none;
+        }
+        .nav-link.active, .nav-item.show .nav-link {
+            border: none;
+            background: #ececec;
+            color: $theme-blue;
+        }
+    }
+    .tab-content {
+        padding: 20px;
+        height: 100%;
+    }
+    .category-title {
+        h5 {
+            margin-bottom: 20px;
+        }
+    }
+    .category-catelog {
+        .category-product {
+            text-align: center;
+            a {
+                img {
+                    height: 100px;
+                    width: auto;
+                    margin: 0 auto;     
+                    object-fit: contain;
+                }
+            }
+            p {
+                padding-top: 10px;
+            }
+        }
+    }
+    .catelog-scroll {
+        height: calc(100vh - 193px);
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .mall-category {
+        .mall-banner {
+            margin-bottom: 15px;
+            img {
+               width: 100%; 
+            }
+        }
+        .category-catelog {
+            .category-product {
+                a {
+                    img{
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+.category-accordion {
+    .card-header {
+        padding: 10px 0;
+        button {
+            padding: 0;
+            &::after {
+                position: absolute;
+                font-family: $linear-icon;
+                content: "\e874";
+                font-size: 9px;
+                top: 14px;
+                right: 0;
+                [dir="rtl"] & {
+                    right: unset;
+                    left: 0;
+                }
+            }
+            &[aria-expanded="true"] {
+                &::after {
+                    content: "\e873";
+                }
+                
+            }
+        }
+    }
+}
+
+body {
+    &.categoryOpen {
+        overflow: hidden;
+        .mobile-menu {
+            z-index: 6;
+        }
+    }
+}
+
+@include max-mq(3xs) { 
+    .category-mobile {
+        > .row {
+            .col-3 {
+                flex: 0 0 30%;
+                max-width: 30%;
+            }
+            .col-9 {
+                flex: 0 0 70%;
+                max-width: 70%;
+            }
+        }
+    }
+    .category-catelog {
+        > .row {
+            > .col-4 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+    }
+}

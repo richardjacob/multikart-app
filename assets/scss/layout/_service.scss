@@ -1,0 +1,89 @@
+/*=====================
+    Service CSS start
+==========================*/
+
+.service-section {
+    .card-body {
+        padding: 40px;
+        .row {
+            > div {
+                + div {
+                    border-left: 1px solid $light-70;
+                    [dir="rtl"] & {
+                        border-right: 1px solid $light-70;
+                        border-left: unset;
+                    }
+                }
+            }
+        }
+        .media {
+            align-items: center;
+            padding-left: 20px;
+            [dir="rtl"] & {
+                padding-left: unset;
+                padding-right: 20px;
+                text-align: right;
+            }
+            span {
+                font-size: 34px;
+            }
+            &-body {
+                h5 {
+                    font-weight: 700;
+                    line-height: 1.4;
+                }
+            }
+        }
+    }
+}
+
+// responsive css
+@include max-mq(xl) {
+    .service-section {
+        .card-body {
+            padding: 30px;
+            .media {
+                padding-left: 0;
+                [dir="rtl"] & {
+                    padding-left: unset;
+                    padding-right: 0;
+                }
+                span {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+@include max-mq(lg) { 
+    .service-section { 
+        .card-body {
+            .row {
+                margin: -15px 0;
+                > div {
+                    flex: 0 0 33.33%;
+                    max-width: 33.33%;
+                    margin: 15px 0;
+                    + div {
+                        border: none !important;
+                    }
+                    &:first-child {
+                        padding-left: 0;
+                        [dir="rtl"] & {
+                            padding-left: unset;
+                            padding-right: 0;
+                        }
+                    }
+                    &:nth-child(4) {
+                        padding-left: 0;
+                        [dir="rtl"] & {
+                            padding-left: 15px;
+                            padding-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

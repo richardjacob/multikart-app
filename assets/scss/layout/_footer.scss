@@ -1,0 +1,308 @@
+/*=====================
+    Footer CSS start
+==========================*/
+
+footer {
+    margin-top: 30px;
+    padding-top: calc(30px + (45 - 30) * ((100vw - 320px) / (1920 - 320)));
+    background-color: $white;
+    border-top: 1px solid $light-70;
+    h6 {
+        font-weight: 700;
+        line-height: 1.6;
+        margin-bottom: 14px;
+    }
+    p {
+        line-height: 1.6;
+    }
+    .footer-tag {
+        margin-bottom: calc(30px + (40 - 30) * ((100vw - 320px) / (1920 - 320)));
+        h6 {
+            margin-bottom: 10px;
+        }
+        ul {
+            margin: -4px -3px;
+            li {
+                margin: 4px 3px;
+                a {
+                    color: $font-light;
+                    display: block;
+                    padding: 7px 15px;
+                    background-color: $bg-light;
+                    border: 1px solid transparent;
+                    border-radius: $border-radius;
+                    &:hover {
+                        background-color: $white;
+                        color: $theme-blue;
+                        border-color: $theme-blue ;
+                    }
+                }
+            }
+        }
+    }
+    .main-footer {
+        border-top: 1px solid $light-60;
+        border-bottom: 1px solid $light-60;
+        padding: 65px 0;
+        ul {
+            li {
+                display: block;
+                .lnr {
+                    font-size: 14px;
+                }
+                a {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                h2 {
+                    font-weight: 400;
+                    font-size: calc(20px + (25 - 20) * ((100vw - 320px) / (1920 - 320)));
+                    padding-left: 17px;
+                    padding-top: 8px;
+                    [dir="rtl"] & {
+                        padding-left: unset;
+                        padding-right: 17px;
+                    }
+                }
+                + li {
+                    margin-top: 8px;
+                }
+            }
+        }
+        .footer-title {
+            h6 {
+                margin-bottom: 0;
+            }
+        }
+        .footer-content {
+            padding-top: 14px;
+        }
+        .news-letter {
+            h6 {
+                margin-bottom: 20px;
+            }
+            .input-group {
+                input {
+                    height: auto;
+                }
+                .input-group-append {
+                    .input-group-text {
+                        color: $white;
+                        background-color: $theme-blue;
+                        border: 1px solid $theme-blue;
+                        line-height: 2;
+                        font-weight: 700;
+                    }
+                }
+            }
+            span {
+                font-size: 14px;
+                display: block;
+                padding-top: 5px;
+                color: darken($font-light, 15%);
+            }
+        }
+    }
+    .sub-footer {
+        padding: 20px 0;
+        .border-ul {
+            margin: 0 !important;
+            @include rtl(text-align, right, left);
+            li {
+                padding: 0 10px;
+                a {
+                    border-bottom: 1px solid transparent;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+                + li {
+                    margin-left: -5px;
+                    [dir="rtl"] & {
+                        margin-left: unset;
+                        margin-right: -5px;
+                    }
+                }
+                &:nth-child(2) {
+                    border-left: none;
+                    [dir="rtl"] & {
+                        border-left: unset;
+                        border-right: none;
+                    }
+                }
+                &:last-child {
+                    padding-right: 0;
+                    [dir="rtl"] & {
+                        padding-right: 10px;
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.facebook-link {
+    &:hover {
+        color: $facebook;
+        border-bottom: 1px solid $facebook !important;
+    }
+}
+.twitter-link {
+    &:hover {
+        color: $twitter;
+        border-bottom: 1px solid $twitter !important;
+    }
+}
+.google-link {
+    &:hover {
+        color: $google;
+        border-bottom: 1px solid $google !important;
+    }
+}
+.youtube-link {
+    &:hover {
+        color: $youtube;
+        border-bottom: 1px solid $youtube !important;
+    }
+}
+
+// responsive css
+@include max-mq(md) {
+    footer {
+        .main-footer {
+            padding: 35px 0;
+            .row {
+                margin-top: -30px;
+                > div {
+                    margin-top: 30px;
+                }
+                .col {
+                    max-width: 25%;
+                    flex-basis: unset;
+                }
+            }
+        }
+    }
+}
+@include max-mq(sm) {
+    footer {
+        .main-footer {
+            border-top: none;
+            padding-top: 20px;
+            .row  {
+                .col {
+                    max-width: 33.33%;
+                }
+            }
+        }
+        .sub-footer {
+            text-align: center;
+            .border-ul {
+                text-align: center;
+            }
+            .payment-image {
+                margin: 10px 0;
+            }
+        }
+    }
+}
+@include max-mq(xs) {
+    footer {
+        padding: 20px 0px 100px;
+        margin-top: 0;
+        border-top: none;
+        .main-footer {
+            padding-top: 0px;
+            > .row {
+                margin: 0;
+                > * {
+                    padding: 0;
+                }
+            }
+            .row {
+                > div {
+                    margin-top: 15px;
+                    padding-top: 15px;
+                    + div {
+                        + div {
+                            border-top: 1px solid $light-60;
+                        }
+                        &:last-child {
+                            border-top: none;
+                        }
+                    }
+                }
+                .col {
+                    max-width: 100%;
+                }
+            }
+            .footer-title {
+                h6 {
+                    position: relative;
+                    font-size: 14px;
+                    &::after {
+                       position: absolute;
+                       content: '\e874';
+                       font-family: $linear-icon;
+                       font-size: 9px;
+                       right: 0;
+                       top: 4px;
+                       color: $font-light;
+                       [dir="rtl"] & {
+                           right: unset;
+                           left: 0;
+                       }
+                    }
+                }
+                &.active {
+                    h6 {
+                        &::after {
+                            color: $black;
+                            content: '\e873';
+                        }
+                    }
+                }
+            }
+            .footer-content {
+                padding: 14px 0;
+                ul {
+                    li {
+                        + li {
+                            margin-top: 4px;
+                        }
+                    }
+                }
+                span {
+                    font-size: 13px;
+                }
+            }
+        }
+        .sub-footer {
+            @include rtl(text-align, left, right);
+            .border-ul {
+                @include rtl(text-align, left, right);
+            }
+        }
+        &.pb-decrease {
+            padding: 20px 0px 130px;
+        }
+    }
+}
+@include max-mq(2xs) {
+    footer {
+        .footer-tag {
+            ul {
+                li {
+                    font-size: 11px;
+                    a {
+                        padding: 6px;
+                    }
+                }
+            }
+        }
+    }
+}
+@include max-mq(3xs) {
+}
