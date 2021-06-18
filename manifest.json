@@ -5,7 +5,7 @@
   "start_url": ".",
   "display": "standalone",
   "background_color": "white",
-  "theme_color": "white",
+  "theme_color": "#ff4c3b",
   "description": "Ecommerece multipurpose app",
   "icons": [{
       "src": "assets/images/logo/logo48.png",
