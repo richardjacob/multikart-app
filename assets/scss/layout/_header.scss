@@ -42,12 +42,15 @@ header {
 // header sidebar
 .overlay-sidebar {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     background-color: rgba($black, 0.30);
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s ease;
+    z-index: 1;
     &.show {
         opacity: 1;
         visibility: visible;
@@ -62,6 +65,7 @@ header {
     width: 310px;
     height: 100vh;
     transition: all 0.5s ease;
+    z-index: 1;
     &.show {
         left: 0;
         transition: all 0.5s ease;
@@ -113,9 +117,11 @@ header {
                             color: $title-color;
                             margin-bottom: 2px;
                             font-weight: 700;
+                            text-transform: capitalize;
                         }
                         h6 {
                             color: $content-color;
+                            text-transform: capitalize;
                         }
                     }
                 }

@@ -7,4 +7,10 @@
     width: 100%;
     margin: 25px 0;
     background-color: $grey-light;
+    &.t-12 {
+        margin-top: 12px;
+    }
+    &.b-20 {
+        margin-bottom: 20px;
+    }
 }

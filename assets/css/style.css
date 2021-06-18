@@ -6,6 +6,10 @@
   width: 100%;
   margin: 25px 0;
   background-color: #EDEFF4; }
+  .divider.t-12 {
+    margin-top: 12px; }
+  .divider.b-20 {
+    margin-bottom: 20px; }
 
 /*=====================
     Typography CSS start
@@ -15,7 +19,7 @@ body {
   position: relative;
   font-size: 14px;
   margin: 0;
-  color: #000000; }
+  color: #222222; }
 
 html {
   scroll-behavior: smooth; }
@@ -298,6 +302,12 @@ button:focus {
 /*=====================
     Slider CSS start
 ==========================*/
+.slick-default .slick-slide > div {
+  margin: 0 8px; }
+
+.slick-default .slick-list {
+  margin: 0 -8px; }
+
 /*=====================
     Dropdown CSS start
 ==========================*/
@@ -350,13 +360,16 @@ header {
 
 .overlay-sidebar {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.3);
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
+  transition: all 0.5s ease;
+  z-index: 1; }
   .overlay-sidebar.show {
     opacity: 1;
     visibility: visible;
@@ -371,7 +384,8 @@ header {
   width: 310px;
   height: 100vh;
   -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
+  transition: all 0.5s ease;
+  z-index: 1; }
   .header-sidebar.show {
     left: 0;
     -webkit-transition: all 0.5s ease;
@@ -425,14 +439,56 @@ header {
           .header-sidebar .sidebar-content .link-section li a .content h4 {
             color: #222222;
             margin-bottom: 2px;
-            font-weight: 700; }
+            font-weight: 700;
+            text-transform: capitalize; }
           .header-sidebar .sidebar-content .link-section li a .content h6 {
-            color: #777777; }
+            color: #777777;
+            text-transform: capitalize; }
         .header-sidebar .sidebar-content .link-section li:first-child {
           padding-top: 0; }
         .header-sidebar .sidebar-content .link-section li:last-child {
           padding-bottom: 0;
           border-bottom: 0; }
+
+/*=====================
+    category CSS start
+==========================*/
+.category-section {
+  margin-top: 54px;
+  padding-top: 0;
+  overflow: hidden; }
+  .category-section .slick-default .slick-list {
+    margin-left: -28px; }
+  .category-section .category-box {
+    text-align: center; }
+    .category-section .category-box img {
+      margin: 0 auto;
+      width: 65px; }
+    .category-section .category-box h4 {
+      margin-top: 5px;
+      text-transform: capitalize;
+      color: #222222; }
+
+.home-section .slick-default .slick-list {
+  margin-left: -23px; }
+
+.home-section .slider-box {
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative; }
+  .home-section .slider-box .slider-content {
+    padding: 18px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 0;
+    text-align: left; }
+    .home-section .slider-box .slider-content h1 {
+      color: #FF4C3B;
+      font-weight: 700; }
+    .home-section .slider-box .slider-content h6 {
+      color: #777777; }
 
 /*=====================
     RTL CSS start

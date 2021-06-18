@@ -1,0 +1,55 @@
+/*=====================
+    category CSS start
+==========================*/
+
+.category-section {
+    margin-top: 54px;
+    padding-top: 0;
+    overflow: hidden;
+    .slick-default {
+        .slick-list {
+            margin-left: -28px;
+        }
+    }
+    .category-box {
+        text-align: center;
+        img {
+            margin: 0 auto;
+            width: 65px;
+        }
+        h4 {
+            margin-top: 5px;
+            text-transform: capitalize;
+            color: $title-color;
+        }
+    }
+}
+
+
+.home-section {
+    .slick-default {
+        .slick-list {
+            margin-left: -23px;
+        }
+    }
+    .slider-box {
+        border-radius: 6px;
+        overflow: hidden;
+        position: relative;
+        .slider-content {
+            padding: 18px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            text-align: left;
+            h1 {
+                color: $theme-color;
+                font-weight: 700;
+            }
+            h6 {
+                color: $content-color;
+            }
+        }
+    }
+}
