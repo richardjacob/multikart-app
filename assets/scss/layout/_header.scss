@@ -11,6 +11,8 @@ header {
     width: 100%;
     .nav-bar {
         margin-right: 15px;
+        display: flex;
+        align-items: center;
         svg {
             stroke: $title-color;
         }
