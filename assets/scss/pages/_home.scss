@@ -57,3 +57,22 @@
         }
     }
 }
+
+// deals section
+.deals-section {
+    padding: 0 15px;
+    margin-top: 10px;
+    .title-part {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        h2 {
+            font-weight: 700;
+        }
+        a {
+            font-size: 14px;
+            margin-left: auto;
+            color: $theme-color;
+        }
+    }
+}

@@ -22,6 +22,25 @@ $(".overlay-sidebar").click(function () {
   $(".overlay-sidebar").removeClass("show");
 });
 
+/*=====================
+    wishlist added start
+==========================*/
+// $(".wishlist-btn").click(function () {
+//   $(this).toggleClass("added");
+// });
+
+
+$(".wishlist-btn").click(function() {
+  if ( $(this).hasClass( "deactivate" ) ) {
+    $(this).removeClass("deactivate")
+  }
+  if ( $(this).hasClass( "active" ) ) {
+    $(this).addClass("deactivate")
+  }
+  $(this).toggleClass("animate");
+  $(this).toggleClass("active");
+  $(this).toggleClass("inactive");
+});
 
 /*=====================
     Slick slider start
@@ -42,7 +61,7 @@ $('.home-slider').slick({
   slidesToScroll: 1,
   centerMode: true,
   centerPadding: '30px',
-  dots: false,
+  dots: true,
   arrows: false,
 });
 
