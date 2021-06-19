@@ -461,7 +461,7 @@ button:focus {
       height: 6px;
       width: 6px;
       border-radius: 5px;
-      background: #dddddd;
+      background: #EDEFF4;
       padding: 0;
       -webkit-transition: all 0.5s ease;
       transition: all 0.5s ease; }
