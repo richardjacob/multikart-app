@@ -1,4 +1,4 @@
-var cacheName = 'multikart';
+var cacheName = 'Multikart';
 var filesToCache = [
   './',
   './index.html',
