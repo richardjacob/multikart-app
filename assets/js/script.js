@@ -80,6 +80,27 @@ $('.home-slider').slick({
   arrows: false,
 });
 
+$('.brand-slider').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  centerMode: true,
+  centerPadding: '30px',
+  dots: false,
+  arrows: false,
+});
+
+
+$('.product-slider').slick({
+  infinite: true,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  centerMode: true,
+  centerPadding: '60px',
+  dots: false,
+  arrows: false,
+});
+
 /*=====================
  Image to background js
  ==========================*/

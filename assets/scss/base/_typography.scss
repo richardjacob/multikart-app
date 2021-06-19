@@ -4,105 +4,110 @@
 
 body {
   font-family: Lato, sans-serif;
-    position: relative;
-    font-size: 14px;
-    margin: 0;
-    color: $title-color;
-  }
+  position: relative;
+  font-size: 14px;
+  margin: 0;
+  color: $title-color;
+}
 
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  ul {
-    padding-left: 0;
-    margin-bottom: 0;
-    [dir="rtl"] & {
-      padding-right: 0;
-      padding-left: unset;
-    }
-  }
-  
-  li {
-    display: inline-block;
-    font-size: 14px;
-  }
-  
-  p {
-    font-size: 14px;
-    line-height: 1.3;
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  a {
-      transition: 0.5s ease;
-      text-decoration: none;
-      &:hover {
-          text-decoration: none;
-          transition: 0.5s ease;
-      }
-      &:focus {
-          outline: none;
-      }
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  [dir="rtl"] & {
+    padding-right: 0;
+    padding-left: unset;
   }
+}
 
-  :focus {
-      outline: none;
-  }
+li {
+  display: inline-block;
+  font-size: 14px;
+}
 
-  .form-control {
-    font-size: 14px;
-      &:focus {
-          box-shadow: none;
-      }
-  }
+p {
+  font-size: 14px;
+  line-height: 1.3;
+}
 
-  h1 {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.1;
-    text-transform: capitalize;
-    margin: 0;
+a {
+  transition: 0.5s ease;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    transition: 0.5s ease;
   }
+  &:focus {
+    outline: none;
+  }
+}
 
-  h2 {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.3;
-    margin: 0;
-  }
+:focus {
+  outline: none;
+}
 
-  h3 {
-    font-size: 15px;
-    line-height: 1.2;
-    margin: 0;
+.form-control {
+  font-size: 14px;
+  &:focus {
+    box-shadow: none;
   }
+}
 
-  h4 {
-    font-size: 14px;
-    line-height: 1.3;
-    margin: 0;
-  }
+h1 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: capitalize;
+  margin: 0;
+}
 
-  h5 {
-    font-size: 13px;
-    line-height: 1.3;
-    margin: 0;
-  }
+h2 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+}
 
-  h6 {
-    font-size: 12px;
-    line-height: 1.2;
-    font-weight: 500;
-    margin: 0;
-  }
+h3 {
+  font-size: 15px;
+  line-height: 1.2;
+  margin: 0;
+}
 
-  span {
-      font-size: 12px;
-  }
+h4 {
+  font-size: 14px;
+  line-height: 1.3;
+  margin: 0;
+}
 
-  section, .section-t-space {
-    padding-top: 30px;
-  }
-  .section-b-space {
-    padding-bottom: 30px;
-  }
+h5 {
+  font-size: 13px;
+  line-height: 1.3;
+  margin: 0;
+}
+
+h6 {
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 500;
+  margin: 0;
+}
+
+span {
+  font-size: 12px;
+}
+
+section,
+.section-t-space {
+  padding-top: 30px;
+}
+.section-b-space {
+  padding-bottom: 30px;
+}
+
+.title {
+  margin-bottom: 15px;
+}

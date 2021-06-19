@@ -32,6 +32,7 @@
 }
 
 .tab-section {
+    overflow: hidden;
     .tab-pane {
         &.show {
             .product-box {

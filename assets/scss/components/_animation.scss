@@ -40,7 +40,7 @@ $fireworks--border: $fireworks--width/2;
             right: 0;
             border-radius: $fireworks--border;
             height: $fireworks--height;
-            background: #0090e3;
+            background: $content-color;
         }
         &:after {
             content: "";

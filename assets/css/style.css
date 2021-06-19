@@ -106,11 +106,15 @@ h6 {
 span {
   font-size: 12px; }
 
-section, .section-t-space {
+section,
+.section-t-space {
   padding-top: 30px; }
 
 .section-b-space {
   padding-bottom: 30px; }
+
+.title {
+  margin-bottom: 15px; }
 
 /*=====================
     Animation CSS start
@@ -150,7 +154,7 @@ section, .section-t-space {
       right: 0;
       border-radius: 1.5px;
       height: 3px;
-      background: #0090e3; }
+      background: #777777; }
     .effect-group .effect:after {
       content: "";
       display: block;
@@ -507,9 +511,40 @@ button:focus {
       background-color: #FF4C3B;
       color: #ffffff; }
 
-.tab-section .tab-pane.show .product-box {
-  -webkit-animation: zoomIn 300ms ease-in-out;
-          animation: zoomIn 300ms ease-in-out; }
+.tab-section {
+  overflow: hidden; }
+  .tab-section .tab-pane.show .product-box {
+    -webkit-animation: zoomIn 300ms ease-in-out;
+            animation: zoomIn 300ms ease-in-out; }
+
+/*=====================
+    Timer CSS start
+==========================*/
+.counters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px 0; }
+  .counters .counter {
+    background-color: #FF4C3B;
+    border-radius: 3px;
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+    margin-right: 8px;
+    position: relative;
+    padding: 7px 8px; }
+    .counters .counter span {
+      font-size: 20px;
+      font-weight: 700; }
+    .counters .counter p {
+      font-size: 8px;
+      position: absolute;
+      left: 5px;
+      top: 2px; }
 
 /*=====================
     Header CSS start
@@ -655,6 +690,9 @@ header {
           padding-bottom: 0;
           border-bottom: 0; }
 
+.bottom-panel {
+  background-color: #ffffff; }
+
 /*=====================
     Productbox CSS start
 ==========================*/
@@ -671,7 +709,8 @@ header {
   padding: 10px;
   position: relative; }
   .product-inline .product-inline-content h4 {
-    margin-bottom: 3px; }
+    margin-bottom: 3px;
+    color: #222222; }
   .product-inline .product-inline-content h5 {
     color: #777777;
     margin-bottom: 3px; }
@@ -731,12 +770,14 @@ header {
   -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .product-box .product-content {
   margin-top: 8px; }
   .product-box .product-content h4 {
-    margin: -3px 0 3px 0; }
+    margin: -3px 0 3px 0;
+    color: #222222; }
 
 .ratings {
   display: -webkit-box;
@@ -812,10 +853,81 @@ header {
       margin-left: auto;
       color: #FF4C3B; }
 
-.tab-section .title-section {
+.title-section {
   margin-bottom: 15px; }
-  .tab-section .title-section h3 {
+  .title-section h3 {
     color: #777777; }
+
+.banner-timer .banner-bg {
+  background-color: #EDEFF4;
+  padding: 25px;
+  position: relative; }
+  .banner-timer .banner-bg .banner-content h6 {
+    color: #777777; }
+  .banner-timer .banner-bg .banner-content h2 {
+    color: #222222;
+    text-transform: capitalize; }
+  .banner-timer .banner-bg .banner-content a {
+    color: #777777;
+    text-decoration: underline;
+    text-transform: capitalize; }
+  .banner-timer .banner-bg .banner-img {
+    position: absolute;
+    right: 0;
+    width: 64%;
+    top: -20px; }
+
+.brand-section {
+  overflow: hidden; }
+  .brand-section .slick-default .slick-list {
+    margin-left: -38px; }
+  .brand-section .brand-box {
+    padding: 12px 15px;
+    background-color: #EDEFF4;
+    border-radius: 3px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .brand-section .brand-box a {
+      text-align: center; }
+      .brand-section .brand-box a img {
+        width: 70%; }
+    .brand-section .brand-box + li {
+      margin-left: 15px; }
+
+.product-slider-section .slick-default .slick-list {
+  margin-left: -68px; }
+
+.offer-corner-section .offer-box {
+  text-align: center;
+  border-radius: 3px;
+  position: relative;
+  z-index: 1; }
+  .offer-corner-section .offer-box:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bg.jpg);
+    background-position: center;
+    z-index: -1;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.04); }
+  .offer-corner-section .offer-box a {
+    display: block;
+    width: 100%;
+    padding: 12px 28px;
+    font-size: 16px;
+    color: #222222;
+    text-transform: uppercase; }
 
 /*=====================
     RTL CSS start

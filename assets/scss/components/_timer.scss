@@ -1,0 +1,28 @@
+/*=====================
+    Timer CSS start
+==========================*/
+.counters {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    .counter {
+        background-color: $theme-color;
+        border-radius: 3px;
+        width: 40px;
+        height: 40px;
+        color: $white;
+        margin-right: 8px;
+        position: relative;
+        padding: 7px 8px;
+        span {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        p {
+            font-size: 8px;
+            position: absolute;
+            left: 5px;
+            top: 2px;
+        }
+    }
+}
