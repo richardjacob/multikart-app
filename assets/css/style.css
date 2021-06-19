@@ -11,6 +11,16 @@
   .divider.b-20 {
     margin-bottom: 20px; }
 
+.px-15 {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.pl-15 {
+  padding-left: 15px; }
+
+.pr-15 {
+  padding-right: 15px; }
+
 /*=====================
     Typography CSS start
 ==========================*/
@@ -68,12 +78,12 @@ h1 {
 
 h2 {
   font-size: 16px;
+  font-weight: 700;
   line-height: 1.3;
   margin: 0; }
 
 h3 {
   font-size: 15px;
-  font-weight: 600;
   line-height: 1.2;
   margin: 0; }
 
@@ -101,6 +111,142 @@ section, .section-t-space {
 
 .section-b-space {
   padding-bottom: 30px; }
+
+/*=====================
+    Animation CSS start
+==========================*/
+.effect-group {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg); }
+  .effect-group .effect {
+    display: block;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    width: 20px;
+    -webkit-transform-origin: 0px 2px;
+            transform-origin: 0px 2px; }
+    .effect-group .effect:nth-child(2) {
+      -webkit-transform: rotate(72deg);
+              transform: rotate(72deg); }
+    .effect-group .effect:nth-child(3) {
+      -webkit-transform: rotate(144deg);
+              transform: rotate(144deg); }
+    .effect-group .effect:nth-child(4) {
+      -webkit-transform: rotate(216deg);
+              transform: rotate(216deg); }
+    .effect-group .effect:nth-child(5) {
+      -webkit-transform: rotate(288deg);
+              transform: rotate(288deg); }
+    .effect-group .effect:before {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      border-radius: 1.5px;
+      height: 3px;
+      background: #0090e3; }
+    .effect-group .effect:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 10%;
+      border-radius: 50%;
+      width: 3px;
+      height: 3px;
+      background: #FF4C3B;
+      -webkit-transform: scale(0, 0);
+              transform: scale(0, 0); }
+
+@-webkit-keyframes fireworkLine {
+  0% {
+    right: 20%;
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0); }
+  25% {
+    right: 20%;
+    width: 6px;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1); }
+  35% {
+    right: 0;
+    width: 35%; }
+  70% {
+    right: 0;
+    width: 4px;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1); }
+  100% {
+    right: 0;
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0); } }
+
+@keyframes fireworkLine {
+  0% {
+    right: 20%;
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0); }
+  25% {
+    right: 20%;
+    width: 6px;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1); }
+  35% {
+    right: 0;
+    width: 35%; }
+  70% {
+    right: 0;
+    width: 4px;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1); }
+  100% {
+    right: 0;
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0); } }
+
+@-webkit-keyframes fireworkPoint {
+  30% {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0); }
+  60% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1); }
+  100% {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0); } }
+
+@keyframes fireworkPoint {
+  30% {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0); }
+  60% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1); }
+  100% {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0); } }
+
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.6, 0.6, 0.6);
+    transform: scale3d(0.6, 0.6, 0.6); }
+  50% {
+    opacity: 1; } }
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.6, 0.6, 0.6);
+    transform: scale3d(0.6, 0.6, 0.6); }
+  50% {
+    opacity: 1; } }
 
 /*=====================
     Button CSS start
@@ -335,6 +481,36 @@ button:focus {
 /*=====================
     Theme tab CSS start
 ==========================*/
+.theme-tab {
+  border-bottom: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: unset;
+      flex-wrap: unset;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-bottom: 20px; }
+  .theme-tab .nav-item + .nav-item {
+    margin-left: 10px; }
+  .theme-tab .nav-link {
+    border: none;
+    padding: 8px 12px;
+    background-color: rgba(237, 239, 244, 0.45);
+    color: #222222;
+    text-transform: capitalize;
+    border-radius: 3px !important;
+    margin-bottom: 0;
+    white-space: nowrap; }
+    .theme-tab .nav-link.active {
+      background-color: #FF4C3B;
+      color: #ffffff; }
+
+.tab-section .tab-pane.show .product-box {
+  -webkit-animation: zoomIn 300ms ease-in-out;
+          animation: zoomIn 300ms ease-in-out; }
+
 /*=====================
     Header CSS start
 ==========================*/
@@ -349,7 +525,9 @@ header {
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 1; }
   header .nav-bar {
     margin-right: 15px;
     display: -webkit-box;
@@ -380,6 +558,9 @@ header {
           color: #222222; }
         header .header-option ul li + li {
           margin-left: 12px; }
+  header.darkHeader {
+    -webkit-box-shadow: 0 0 10px #e8e8e8;
+            box-shadow: 0 0 10px #e8e8e8; }
 
 .overlay-sidebar {
   position: fixed;
@@ -408,7 +589,8 @@ header {
   height: 100vh;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  z-index: 1; }
+  z-index: 1;
+  overflow: auto; }
   .header-sidebar.show {
     left: 0;
     -webkit-transition: all 0.5s ease;
@@ -488,6 +670,11 @@ header {
           align-items: center;
   padding: 10px;
   position: relative; }
+  .product-inline .product-inline-content h4 {
+    margin-bottom: 3px; }
+  .product-inline .product-inline-content h5 {
+    color: #777777;
+    margin-bottom: 3px; }
   .product-inline img {
     width: 90px;
     height: 90px;
@@ -495,157 +682,75 @@ header {
     -o-object-fit: cover;
        object-fit: cover;
     margin-right: 12px; }
-  .product-inline .wishlist-btn {
-    width: 24px;
-    height: 24px;
-    border-radius: 100%;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    background-color: #ffffff; }
-    .product-inline .wishlist-btn .icli {
-      color: #777777; }
-    .product-inline .wishlist-btn .icbo {
-      display: none; }
-    .product-inline .wishlist-btn.active .icli {
-      display: none; }
-    .product-inline .wishlist-btn.active .icbo {
-      display: block;
-      color: #FF4C3B; }
-    .product-inline .wishlist-btn.active .effect:before {
-      -webkit-animation: fireworkLine 0.5s linear 0.1s;
-              animation: fireworkLine 0.5s linear 0.1s; }
-    .product-inline .wishlist-btn.active .effect:after {
-      -webkit-animation: fireworkPoint 0.5s linear 0.1s;
-              animation: fireworkPoint 0.5s linear 0.1s; }
 
-.effect-group {
+.price h4 {
+  margin-bottom: 0; }
+  .price h4 del {
+    color: #777777;
+    margin: 0 6px; }
+  .price h4 span {
+    color: #FF4C3B;
+    font-size: 14px; }
+
+.wishlist-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-transform: rotate(25deg);
-          transform: rotate(25deg); }
-  .effect-group .effect {
+  top: 10px;
+  right: 10px;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #ffffff; }
+  .wishlist-btn .icli {
+    color: #777777; }
+  .wishlist-btn .icbo {
+    display: none; }
+  .wishlist-btn.active .icli {
+    display: none; }
+  .wishlist-btn.active .icbo {
     display: block;
-    position: absolute;
-    top: 38%;
-    left: 50%;
-    width: 20px;
-    -webkit-transform-origin: 0px 2px;
-            transform-origin: 0px 2px; }
-    .effect-group .effect:nth-child(2) {
-      -webkit-transform: rotate(72deg);
-              transform: rotate(72deg); }
-    .effect-group .effect:nth-child(3) {
-      -webkit-transform: rotate(144deg);
-              transform: rotate(144deg); }
-    .effect-group .effect:nth-child(4) {
-      -webkit-transform: rotate(216deg);
-              transform: rotate(216deg); }
-    .effect-group .effect:nth-child(5) {
-      -webkit-transform: rotate(288deg);
-              transform: rotate(288deg); }
-    .effect-group .effect:before {
-      content: "";
-      display: block;
-      position: absolute;
-      right: 0;
-      border-radius: 1.5px;
-      height: 3px;
-      background: #0090e3; }
-    .effect-group .effect:after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 10px;
-      right: 10%;
-      border-radius: 50%;
-      width: 3px;
-      height: 3px;
-      background: #ff6600;
-      -webkit-transform: scale(0, 0);
-              transform: scale(0, 0); }
+    color: #FF4C3B; }
+  .wishlist-btn.active .effect:before {
+    -webkit-animation: fireworkLine 0.5s linear 0.1s;
+            animation: fireworkLine 0.5s linear 0.1s; }
+  .wishlist-btn.active .effect:after {
+    -webkit-animation: fireworkPoint 0.5s linear 0.1s;
+            animation: fireworkPoint 0.5s linear 0.1s; }
 
-@-webkit-keyframes fireworkLine {
-  0% {
-    right: 20%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0); }
-  25% {
-    right: 20%;
-    width: 6px;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1); }
-  35% {
-    right: 0;
-    width: 35%; }
-  70% {
-    right: 0;
-    width: 4px;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1); }
-  100% {
-    right: 0;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0); } }
+.product-box .img-part {
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  position: relative; }
 
-@keyframes fireworkLine {
-  0% {
-    right: 20%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0); }
-  25% {
-    right: 20%;
-    width: 6px;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1); }
-  35% {
-    right: 0;
-    width: 35%; }
-  70% {
-    right: 0;
-    width: 4px;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1); }
-  100% {
-    right: 0;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0); } }
+.product-box .product-content {
+  margin-top: 8px; }
+  .product-box .product-content h4 {
+    margin: -3px 0 3px 0; }
 
-@-webkit-keyframes fireworkPoint {
-  30% {
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0); }
-  60% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1); }
-  100% {
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0); } }
-
-@keyframes fireworkPoint {
-  30% {
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0); }
-  60% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1); }
-  100% {
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0); } }
+.ratings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .ratings li .icbo {
+    color: #FFBA49; }
+  .ratings li .icli {
+    color: #EDEFF4; }
+  .ratings li + li {
+    margin-left: 4px; }
 
 /*=====================
     Home page CSS start
@@ -691,7 +796,6 @@ header {
         margin-bottom: 8px; }
 
 .deals-section {
-  padding: 0 15px;
   margin-top: 10px; }
   .deals-section .title-part {
     display: -webkit-box;
@@ -707,6 +811,11 @@ header {
       font-size: 14px;
       margin-left: auto;
       color: #FF4C3B; }
+
+.tab-section .title-section {
+  margin-bottom: 15px; }
+  .tab-section .title-section h3 {
+    color: #777777; }
 
 /*=====================
     RTL CSS start

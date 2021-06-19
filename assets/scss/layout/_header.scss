@@ -9,6 +9,8 @@ header {
     left: 0;
     top: 0;
     width: 100%;
+    background-color: $white;
+    z-index: 1;
     .nav-bar {
         margin-right: 15px;
         display: flex;
@@ -42,6 +44,9 @@ header {
             }
         }
     }
+    &.darkHeader {
+        box-shadow: 0 0 10px #e8e8e8;
+    }
 }
 
 // header sidebar
@@ -71,6 +76,7 @@ header {
     height: 100vh;
     transition: all 0.5s ease;
     z-index: 1;
+    overflow: auto;
     &.show {
         left: 0;
         transition: all 0.5s ease;

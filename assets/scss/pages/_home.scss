@@ -60,7 +60,6 @@
 
 // deals section
 .deals-section {
-    padding: 0 15px;
     margin-top: 10px;
     .title-part {
         display: flex;
@@ -73,6 +72,16 @@
             font-size: 14px;
             margin-left: auto;
             color: $theme-color;
+        }
+    }
+}
+
+// tab section
+.tab-section {
+    .title-section {
+        margin-bottom: 15px;
+        h3 {
+            color: $content-color;
         }
     }
 }

@@ -11,30 +11,45 @@ window.onload = () => {
 }
 
 /*=====================
-    Header sidebar start
+    Header sidebar 
 ==========================*/
 $(".nav-bar").click(function () {
   $(".header-sidebar").addClass("show");
   $(".overlay-sidebar").addClass("show");
+  $('body').css({
+    'overflow': 'hidden'
+  });
 });
 $(".overlay-sidebar").click(function () {
   $(".header-sidebar").removeClass("show");
   $(".overlay-sidebar").removeClass("show");
+  $('body').css({
+    'overflow': 'auto'
+  });
+});
+
+
+/*=====================
+    Header scroll js
+==========================*/
+$(window).scroll(function () {
+  var scroll = $(window).scrollTop();
+
+  if (scroll >= 15) {
+    $("header").addClass("darkHeader");
+  } else {
+    $("header").removeClass("darkHeader");
+  }
 });
 
 /*=====================
     wishlist added start
 ==========================*/
-// $(".wishlist-btn").click(function () {
-//   $(this).toggleClass("added");
-// });
-
-
-$(".wishlist-btn").click(function() {
-  if ( $(this).hasClass( "deactivate" ) ) {
+$(".wishlist-btn").click(function () {
+  if ($(this).hasClass("deactivate")) {
     $(this).removeClass("deactivate")
   }
-  if ( $(this).hasClass( "active" ) ) {
+  if ($(this).hasClass("active")) {
     $(this).addClass("deactivate")
   }
   $(this).toggleClass("animate");
