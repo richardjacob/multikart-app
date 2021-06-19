@@ -110,21 +110,18 @@ button:focus {
 
 .btn {
   font-weight: 700;
-  font-size: 13px;
-  padding: 6px 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  font-size: 12px;
+  padding: 6px 18px;
+  text-transform: uppercase; }
   .btn:focus, .btn.focus {
     outline: none;
     -webkit-box-shadow: none;
             box-shadow: none; }
+
+.btn-solid {
+  background-color: #FF4C3B;
+  color: #ffffff;
+  font-weight: 400; }
 
 /*=====================
     form CSS start
@@ -339,6 +336,8 @@ header {
             align-items: center; }
     header .nav-bar svg {
       stroke: #222222; }
+  header .brand-logo img {
+    width: 125px; }
   header .header-option {
     margin-left: auto; }
     header .header-option ul {
@@ -451,7 +450,7 @@ header {
           border-bottom: 0; }
 
 /*=====================
-    category CSS start
+    Home page CSS start
 ==========================*/
 .category-section {
   margin-top: 54px;
@@ -469,26 +468,29 @@ header {
       text-transform: capitalize;
       color: #222222; }
 
-.home-section .slick-default .slick-list {
-  margin-left: -23px; }
-
-.home-section .slider-box {
-  border-radius: 6px;
-  overflow: hidden;
-  position: relative; }
-  .home-section .slider-box .slider-content {
-    padding: 18px;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    left: 0;
-    text-align: left; }
-    .home-section .slider-box .slider-content h1 {
-      color: #FF4C3B;
-      font-weight: 700; }
-    .home-section .slider-box .slider-content h6 {
-      color: #777777; }
+.home-section {
+  overflow: hidden; }
+  .home-section .slick-default .slick-list {
+    margin-left: -23px; }
+  .home-section .slider-box {
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative; }
+    .home-section .slider-box .slider-content {
+      padding: 18px;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      left: 0;
+      text-align: left; }
+      .home-section .slider-box .slider-content h1 {
+        color: #FF4C3B;
+        font-weight: 700;
+        margin: 6px 0; }
+      .home-section .slider-box .slider-content h6 {
+        color: #777777;
+        margin-bottom: 8px; }
 
 /*=====================
     RTL CSS start

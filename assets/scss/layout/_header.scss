@@ -17,6 +17,11 @@ header {
             stroke: $title-color;
         }
     }
+    .brand-logo {
+        img {
+            width: 125px;
+        }
+    }
     .header-option {
         margin-left: auto;
         ul {
