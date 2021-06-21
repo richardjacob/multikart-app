@@ -17,10 +17,12 @@
 
 // layout scss files
 @import "layout/header";
+@import "layout/bottom-panel";
 @import "layout/product-box";
 
 // pages
 @import "pages/home";
+@import "pages/category";
 
 // themes scss files
 @import "themes/rtl";

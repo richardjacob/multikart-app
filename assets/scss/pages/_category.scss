@@ -1,0 +1,61 @@
+/*=====================
+     Category page CSS start
+==========================*/
+
+.category-listing {
+    .category-wrap {
+        display: block;
+        border-radius: 5px;
+        background-color: $grey-light;
+        display: flex;
+        align-items: center;
+        padding: 20px 25px;
+        position: relative;
+        .sale-gif {
+            width: 46px;
+        }
+        .content-part {
+            width: 100%;
+            h2 {
+                text-transform: uppercase;
+                color: $title-color;
+            }
+            h4 {
+                color: $content-color;
+                margin-top: 5px;
+            }
+        }
+        + .category-wrap {
+            margin-top: 26px;
+        }
+        .img-part {
+            position: absolute;
+            right: 10px;
+            bottom: 0;
+            img {
+                height: 100px;
+            }
+        }
+        &:nth-child(even) {
+            .content-part {
+                text-align: right;
+            }
+            .img-part {
+                right: unset;
+                left: 10px;
+            }
+        }
+        &:nth-child(2) {
+            background-color: #EAEAEA;
+        }
+        &:nth-child(4) {
+            background-color: #EDE8E7;
+        }
+        &:nth-child(6) {
+            background-color: #E5E5E6;
+        }
+    }
+    &.top-space {
+        margin-top: 62px;
+    }
+}

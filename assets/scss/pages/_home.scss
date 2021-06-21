@@ -2,9 +2,12 @@
     Home page CSS start
 ==========================*/
 
+.top-space {
+    margin-top: 54px;
+}
+
 // top category
 .category-section {
-    margin-top: 54px;
     padding-top: 0;
     overflow: hidden;
     .slick-default {
@@ -168,7 +171,7 @@
             background-position: center;
             z-index: -1;
             background-blend-mode: overlay;
-            background-color: rgba($black, 0.04);
+            background-color: rgba($black, 0.02);
         }
         a {
             display: block;

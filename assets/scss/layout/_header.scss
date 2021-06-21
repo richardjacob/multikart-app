@@ -11,6 +11,23 @@ header {
     width: 100%;
     background-color: $white;
     z-index: 1;
+    .back-links {
+        a {
+            display: flex;
+            align-items: center;
+            i {
+                color: $title-color;
+                font-size: 20px;
+                margin-right: 5px;
+            }
+            .content {
+                h2 {
+                    color: $title-color;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
     .nav-bar {
         margin-right: 15px;
         display: flex;
@@ -45,7 +62,7 @@ header {
         }
     }
     &.darkHeader {
-        box-shadow: 0 0 10px #e8e8e8;
+        box-shadow: 0px 0px 4px rgba($black, 0.10);
     }
 }
 
@@ -60,7 +77,7 @@ header {
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s ease;
-    z-index: 1;
+    z-index: 2;
     &.show {
         opacity: 1;
         visibility: visible;
@@ -75,7 +92,7 @@ header {
     width: 310px;
     height: 100vh;
     transition: all 0.5s ease;
-    z-index: 1;
+    z-index: 2;
     overflow: auto;
     &.show {
         left: 0;

@@ -563,6 +563,20 @@ header {
   width: 100%;
   background-color: #ffffff;
   z-index: 1; }
+  header .back-links a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    header .back-links a i {
+      color: #222222;
+      font-size: 20px;
+      margin-right: 5px; }
+    header .back-links a .content h2 {
+      color: #222222;
+      text-transform: capitalize; }
   header .nav-bar {
     margin-right: 15px;
     display: -webkit-box;
@@ -594,8 +608,8 @@ header {
         header .header-option ul li + li {
           margin-left: 12px; }
   header.darkHeader {
-    -webkit-box-shadow: 0 0 10px #e8e8e8;
-            box-shadow: 0 0 10px #e8e8e8; }
+    -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1); }
 
 .overlay-sidebar {
   position: fixed;
@@ -608,7 +622,7 @@ header {
   visibility: hidden;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  z-index: 1; }
+  z-index: 2; }
   .overlay-sidebar.show {
     opacity: 1;
     visibility: visible;
@@ -624,7 +638,7 @@ header {
   height: 100vh;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  z-index: 1;
+  z-index: 2;
   overflow: auto; }
   .header-sidebar.show {
     left: 0;
@@ -692,6 +706,61 @@ header {
 
 .bottom-panel {
   background-color: #ffffff; }
+
+/*=====================
+    Bottom panel CSS start
+==========================*/
+.bottom-panel {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: #ffffff;
+  padding: 10px;
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1); }
+  .bottom-panel ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    .bottom-panel ul li {
+      text-align: center; }
+      .bottom-panel ul li .icon {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; }
+      .bottom-panel ul li a {
+        color: #222222; }
+        .bottom-panel ul li a i {
+          font-size: 20px; }
+          .bottom-panel ul li a i.icbo {
+            display: none; }
+        .bottom-panel ul li a span {
+          font-size: 9px;
+          font-weight: 700;
+          color: #222222;
+          text-transform: uppercase;
+          margin-top: 4px;
+          display: block; }
+      .bottom-panel ul li.active a span {
+        color: #FF4C3B; }
+      .bottom-panel ul li.active a i.icbo {
+        display: block;
+        color: #FF4C3B; }
+      .bottom-panel ul li.active a i.icli {
+        display: none; }
+
+.panel-space {
+  padding-top: 80px; }
 
 /*=====================
     Productbox CSS start
@@ -796,8 +865,10 @@ header {
 /*=====================
     Home page CSS start
 ==========================*/
+.top-space {
+  margin-top: 54px; }
+
 .category-section {
-  margin-top: 54px;
   padding-top: 0;
   overflow: hidden; }
   .category-section .slick-default .slick-list {
@@ -920,7 +991,7 @@ header {
     background-position: center;
     z-index: -1;
     background-blend-mode: overlay;
-    background-color: rgba(0, 0, 0, 0.04); }
+    background-color: rgba(0, 0, 0, 0.02); }
   .offer-corner-section .offer-box a {
     display: block;
     width: 100%;
@@ -928,6 +999,54 @@ header {
     font-size: 16px;
     color: #222222;
     text-transform: uppercase; }
+
+/*=====================
+     Category page CSS start
+==========================*/
+.category-listing .category-wrap {
+  display: block;
+  border-radius: 5px;
+  background-color: #EDEFF4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 25px;
+  position: relative; }
+  .category-listing .category-wrap .sale-gif {
+    width: 46px; }
+  .category-listing .category-wrap .content-part {
+    width: 100%; }
+    .category-listing .category-wrap .content-part h2 {
+      text-transform: uppercase;
+      color: #222222; }
+    .category-listing .category-wrap .content-part h4 {
+      color: #777777;
+      margin-top: 5px; }
+  .category-listing .category-wrap + .category-wrap {
+    margin-top: 26px; }
+  .category-listing .category-wrap .img-part {
+    position: absolute;
+    right: 10px;
+    bottom: 0; }
+    .category-listing .category-wrap .img-part img {
+      height: 100px; }
+  .category-listing .category-wrap:nth-child(even) .content-part {
+    text-align: right; }
+  .category-listing .category-wrap:nth-child(even) .img-part {
+    right: unset;
+    left: 10px; }
+  .category-listing .category-wrap:nth-child(2) {
+    background-color: #EAEAEA; }
+  .category-listing .category-wrap:nth-child(4) {
+    background-color: #EDE8E7; }
+  .category-listing .category-wrap:nth-child(6) {
+    background-color: #E5E5E6; }
+
+.category-listing.top-space {
+  margin-top: 62px; }
 
 /*=====================
     RTL CSS start
