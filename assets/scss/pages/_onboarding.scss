@@ -1,0 +1,55 @@
+/*========================
+    onboarding CSS start
+==========================*/
+
+.design-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.topbar-section {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    a {
+        margin-left: auto;
+        font-size: 16px;
+        color: $title-color;
+    }
+    img {
+        width: 115px;
+    }
+}
+
+.boarding-content {
+    text-align: center;
+    h2 {
+        margin-bottom: 3px;
+    }
+    p {
+        font-size: 14px;
+        color: $content-color;
+    }
+}
+
+.onboarding-slider {
+    .slick-slide {
+        > div {
+            transform: scale(0.94);
+            .boarding-content {
+                display: none;
+                text-transform: capitalize;
+            }
+        }
+        &.slick-current {
+            > div {
+                transform: scale(1);
+                .boarding-content {
+                    display: block;
+                }
+            }
+        }
+    }
+}

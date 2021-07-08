@@ -1,0 +1,67 @@
+/*=========================
+   delivery Page CSS start
+==========================*/
+
+.delivery-option-section {
+    ul {
+        li {
+            width: 100%;
+            position: relative;
+            .check-box {
+                width: 100%;
+                background-color: $grey-light-25;
+                border: 1px solid $grey-light-25;
+                border-radius: 3px;
+                padding: 15px 15px 50px;
+                position: relative;
+                label {
+                    width: 100%;
+                }
+                .label {
+                    position: absolute;
+                    top: 14px;
+                    right: 16px;
+                    background-color: $theme-color;
+                    color: $white;
+                    font-size: 8px;
+                    font-weight: 700;
+                    padding: 1px 6px;
+                    border-radius: 2px;
+                }
+                .name {
+                    font-weight: 700;
+                }
+                .addess {
+                    margin: 6px 0 8px 0;
+                    h4 {
+                        color: $content-color;
+                    }
+                }
+                &.active {
+                    background-color: $theme-5;
+                    border: 1px solid $theme-color;
+                }
+            }
+            .buttons {
+                left: 42px;
+                position: absolute;
+                bottom: 12px;
+                a {
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    background-color: $grey-light-60;
+                    color: $content-color;
+                    padding: 4px 10px;
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+                &.l-15 {
+                    left: 15px;
+                }
+            }
+            + li {
+                margin-top: 15px;
+            }
+        }
+    }
+}

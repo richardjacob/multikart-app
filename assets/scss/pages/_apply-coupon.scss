@@ -1,0 +1,59 @@
+/*=========================
+   apply coupons Page CSS start
+==========================*/
+.search-coupons {
+    position: relative;
+    input {
+        padding: 10px 40px;
+    }
+    i {
+        position: absolute;
+        font-size: 20px;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.coupon-listing {
+    margin-top: 22px;
+    li {
+        .coupon-box {
+            .top-bar {
+                display: flex;
+                align-items: center;
+                h4 {
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    margin-right: 10px;
+                }
+                span {
+                    background-color: $grey-light-45;
+                    padding: 3px 8px;
+                    border-radius: 2px;
+                }
+                a {
+                    text-transform: uppercase;
+                    margin-left: auto;
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: $theme-color;
+                }
+            }
+            p {
+                color: $content-color;
+                font-size: 12px;
+                margin-bottom: 6px;
+                margin-top: 2px;
+            }
+            h6 {
+                font-size: 12px;
+            }
+        }
+        + li {
+            padding-top: 20px;
+            margin-top: 20px;
+            border-top: 1px solid $grey-light-60;
+        }
+    }
+}

@@ -2,6 +2,22 @@
     Reset CSS start
 ==========================*/
 
+section,
+.section-t-space {
+  padding-top: 30px;
+}
+.section-b-space {
+  padding-bottom: 30px;
+}
+
+.lg-t-space {
+    padding-top: 20px;
+}
+
+.lg-b-space {
+    padding-bottom: 20px;
+}
+
 .divider {
     height: 10px;
     width: 100%;
@@ -26,4 +42,69 @@
 
 .pr-15 {
     padding-right: 15px;
+}
+
+.text-green {
+    color: $theme-green;
+}
+
+.content-color {
+    color: $content-color !important;
+}
+
+.bg-theme {
+    background-color: $theme-color !important;
+}
+
+.theme-color {
+    color: $theme-color;
+}
+
+.title-color {
+    color: $title-color;
+}
+
+.listing-section {
+    list-style-type: disc;
+    padding-inline-start: 20px;
+    li {
+        display: list-item;
+        color: $content-color;
+    }
+}
+
+.filter-color {
+    .light-purple {
+        background-color: #E6E6FA;
+    }
+    .light-grey {
+        background-color: #F5F5F5;
+    }
+    .blue-purple {
+        background-color: #B0C4DE;
+    }
+    .light-orange {
+        background-color: #EBACA2;
+    }
+    .dark-pink {
+        background-color: #FFC0CB;
+    }
+    .green-blue {
+        background-color: #ADD8E6;
+    }
+    .green {
+        background-color: #BED3C3;
+    }
+    .blue {
+        background-color: #9FD9F2;
+    }
+    .yellow {
+        background-color: #F5DEB3;
+    }
+    .light-red {
+        background-color: #FFE4E1;
+    }
+    .light-purple2 {
+        background-color: #E6E6FA;
+    }
 }

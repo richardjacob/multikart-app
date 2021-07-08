@@ -8,7 +8,7 @@ button:focus {
 
 .btn {
   font-weight: 700;
-  font-size: 12px;
+  font-size: 16px;
   padding: 6px 18px;
   text-transform: uppercase;
   &:focus,
@@ -22,4 +22,14 @@ button:focus {
   background-color: $theme-color;
   color: $white;
   font-weight: 400;
+}
+
+.btn-outline {
+  background-color: $white;
+  border: 1px solid $theme-color;
+  color: $theme-color;
+  font-weight: 400;
+  &.content-color {
+    border-color: $content-color;
+  }
 }

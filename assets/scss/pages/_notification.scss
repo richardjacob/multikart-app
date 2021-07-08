@@ -1,0 +1,54 @@
+/*=====================
+    Notification CSS start
+==========================*/
+
+.filter-title {
+    border-bottom: none;
+    display: flex;
+    flex-wrap: unset;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin-bottom: 20px;
+    li {
+        padding: 8px 22px;
+        background-color: $grey-light-45;
+        text-transform: capitalize;
+        border-radius: 3px !important;
+        margin-right: 15px;
+        a {
+            color: $title-color;
+            white-space: nowrap;
+        }
+        &.active {
+            background-color: $theme-color;
+            a {
+                color: $white;
+            }
+        }
+    }
+}
+
+.filter-content {
+    .media {
+        display: flex;
+        align-items: center;
+        img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            margin-right: 12px;
+        }
+        .media-body {
+            h4 {
+                font-weight: 700;
+            }
+        }
+    }
+    .item {
+        padding: 15px;
+        + .item {
+            margin-top: 15px;
+        }
+    }
+}

@@ -1,16 +1,4 @@
 /*=====================
-    service worker start
-==========================*/
-window.onload = () => {
-  'use strict';
-
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-      .register('./sw.js');
-  }
-}
-
-/*=====================
     Header sidebar 
 ==========================*/
 $(".nav-bar").click(function () {
@@ -41,6 +29,34 @@ $(window).scroll(function () {
     $("header").removeClass("darkHeader");
   }
 });
+
+/*=====================
+    Filter select js
+==========================*/
+$('.filter-row li, .filter-color li, .size-select li').on('click', function (e) {
+  $(this).addClass('active').siblings('.active').removeClass('active');
+});
+
+
+/*=====================
+ Quantity js
+==========================*/
+
+$('.qty-counter .quantity-right-plus').on('click', function () {
+  var $qty = $(this).parents(".qty-counter").find(".input-number");
+  var currentVal = parseInt($qty.val(), 10);
+  if (!isNaN(currentVal)) {
+    $qty.val(currentVal + 1);
+  }
+});
+$('.qty-counter .quantity-left-minus').on('click', function () {
+  var $qty = $(this).parents(".qty-counter").find(".input-number");
+  var currentVal = parseInt($qty.val(), 10);
+  if (!isNaN(currentVal) && currentVal > 1) {
+    $qty.val(currentVal - 1);
+  }
+});
+
 
 /*=====================
     wishlist added start
@@ -99,7 +115,38 @@ $('.product-slider').slick({
   centerPadding: '60px',
   dots: false,
   arrows: false,
+  responsive: [
+    {
+      breakpoint: 360,
+      settings: {
+        centerPadding: '20px',
+      }
+    }
+  ]
 });
+
+
+$('.payment-slider').slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  centerMode: true,
+  centerPadding: '40px',
+  dots: false,
+  arrows: false,
+});
+
+
+$('.onboarding-slider').slick({
+  centerMode: true,
+  centerPadding: '40px',
+  slidesToShow: 1,
+  infinite: false,
+  arrows: false,
+  dots: true
+});
+
+
 
 /*=====================
  Image to background js
@@ -126,3 +173,25 @@ jQuery('.bg-img').each(function () {
 
   el.hide();
 });
+
+
+/*=====================
+ radio checkbox js
+ ==========================*/
+$('.delivery-option-section li .check-box').on('click', function (e) {
+  $(this).addClass('active').parents("li").siblings().find(".check-box").removeClass('active');
+});
+
+
+/*========================
+ Payment show more js
+ ==========================*/
+$('.show-more').on('click', function (e) {
+  $('.offer-listing').toggleClass("maximized");
+  $(this).text(function(i, text){
+      return text === "Show Less" ? "Show More" : "Show Less";
+  })
+});
+
+
+
