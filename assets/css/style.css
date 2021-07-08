@@ -581,6 +581,24 @@ button:focus {
   content: "";
   display: block; }
 
+.b-top {
+  background-position: top !important; }
+
+.b-bottom {
+  background-position: bottom !important; }
+
+.b-center {
+  background-position: center !important; }
+
+.b-left {
+  background-position: left !important; }
+
+.b-right {
+  background-position: right !important; }
+
+.b_size_content {
+  background-size: contain !important; }
+
 /*=====================
     Slider CSS start
 ==========================*/
@@ -613,6 +631,87 @@ button:focus {
 
 .theme-dots.slick-dotted.slick-slider {
   margin-bottom: 0; }
+
+/**=====================
+    Toggle css start
+==========================**/
+.toggle-sec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .toggle-sec label {
+    margin-right: 20px; }
+    .toggle-sec label span {
+      display: block;
+      color: #647589; }
+  .toggle-sec .toggle-btn {
+    position: relative;
+    width: 74px;
+    height: 36px;
+    overflow: hidden;
+    border-radius: 100px;
+    margin-left: auto; }
+    .toggle-sec .toggle-btn .knobs,
+    .toggle-sec .toggle-btn .layer {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(237, 239, 244, 0.6);
+      -webkit-transition: 0.3s ease all;
+      transition: 0.3s ease all;
+      z-index: 1;
+      left: 0; }
+    .toggle-sec .toggle-btn .checkbox {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      opacity: 0;
+      cursor: pointer;
+      z-index: 3; }
+    .toggle-sec .toggle-btn .knobs {
+      z-index: 2; }
+      .toggle-sec .toggle-btn .knobs:before, .toggle-sec .toggle-btn .knobs:after,
+      .toggle-sec .toggle-btn .knobs span {
+        position: absolute;
+        top: 4px;
+        width: 28px;
+        height: 28px;
+        font-size: 10px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1;
+        padding: 9px 4px;
+        border-radius: 50%;
+        -webkit-transition: 0.4s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+        transition: 0.4s cubic-bezier(0.18, 0.89, 0.35, 1.15) all; }
+      .toggle-sec .toggle-btn .knobs:before {
+        content: 'NO';
+        left: 4px; }
+      .toggle-sec .toggle-btn .knobs:after {
+        content: 'YES';
+        right: -24px; }
+      .toggle-sec .toggle-btn .knobs:before, .toggle-sec .toggle-btn .knobs:after {
+        color: #ffffff;
+        z-index: 2; }
+      .toggle-sec .toggle-btn .knobs span {
+        left: 4px;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 1; }
+    .toggle-sec .toggle-btn .checkbox:checked + .knobs:before {
+      left: -24px; }
+    .toggle-sec .toggle-btn .checkbox:checked + .knobs:after {
+      right: 4px; }
+    .toggle-sec .toggle-btn .checkbox:checked + .knobs span {
+      left: 42px;
+      background-color: #FF4C3B; }
+    .toggle-sec .toggle-btn .checkbox:checked + .knobs ~ .layer {
+      background-color: #EDEFF4; }
 
 /*=====================
     Dropdown CSS start
@@ -2705,6 +2804,28 @@ header {
   padding: 15px; }
   .filter-content .item + .item {
     margin-top: 15px; }
+
+/*=========================
+   Settings Page CSS start
+==========================*/
+.setting-section .card {
+  border: none;
+  -webkit-box-shadow: 0 0 8px #dcdcdc;
+          box-shadow: 0 0 8px #dcdcdc; }
+
+.setting-section .form-check-label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 40px; }
 
 /*=====================
     RTL CSS start
