@@ -32,6 +32,10 @@
             position: absolute;
             right: 10px;
             bottom: 0;
+            [dir="rtl"] & {
+                right: unset;
+                left: 10px;
+            }
             img {
                 height: 105px;
             }
@@ -40,20 +44,38 @@
             .content-part {
                 text-align: right;
                 margin-left: auto;
+                [dir="rtl"] & {
+                    text-align: left;
+                    margin-left: unset;
+                    margin-right: auto;
+                }
             }
             .img-part {
                 right: unset;
                 left: 10px;
+                [dir="rtl"] & {
+                    left: unset;
+                    right: 10px;
+                }
             }
         }
         &:nth-child(2) {
             background-color: #EAEAEA;
+            [class="dark"] & {
+                background-color: $grey-light;
+            }
         }
         &:nth-child(4) {
             background-color: #EDE8E7;
+            [class="dark"] & {
+                background-color: $grey-light;
+            }
         }
         &:nth-child(6) {
             background-color: #E5E5E6;
+            [class="dark"] & {
+                background-color: $grey-light;
+            }
         }
     }
 }
@@ -73,6 +95,7 @@
         background: none;
         font-size: 16px;
         color: $title-color;
+        box-shadow: none;
         &:after {
             background: none;
             content: "\e903";

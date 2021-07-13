@@ -13,6 +13,10 @@
     .nav-item {
         + .nav-item {
             margin-left: 10px;
+            [dir="rtl"] & {
+                margin-left: 0;
+                margin-right: 10px;
+            }
         }
     }
     .nav-link {
@@ -27,6 +31,9 @@
         &.active {
             background-color: $theme-color;
             color: $white;
+            [class="dark"] & {
+                color: #ffffff;
+            }
         }
     }
 }

@@ -51,6 +51,10 @@
     top: 50%;
     transform: translateY(-50%);
     right: 15px;
+    [dir="rtl"] & {
+        right: unset;
+        left: 15px;
+    }
     i {
         font-size: 22px;
         color: $content-color;

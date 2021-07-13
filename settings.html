@@ -31,9 +31,6 @@
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/slick.css">
 
-    <!-- pricing slider css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/vendors/pricing-slider.css">
-
     <!-- iconly css -->
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/iconly.css">
 
@@ -44,12 +41,18 @@
 
 <body>
 
+    <!-- loader strat -->
+    <div class="loader">
+        <span></span>
+        <span></span>
+    </div>
+    <!-- loader end -->
 
 
     <!-- header start -->
     <header>
         <div class="back-links">
-            <a href="index.html">
+            <a href="home.html">
                 <i class="iconly-Arrow-Left icli"></i>
                 <div class="content">
                     <h2>settings</h2>
@@ -123,7 +126,7 @@
     <div class="bottom-panel">
         <ul>
             <li>
-                <a href="index.html">
+                <a href="home.html">
                     <div class="icon">
                         <i class="iconly-Home icli"></i>
                         <i class="iconly-Home icbo"></i>
@@ -173,9 +176,9 @@
 
     <div class="container">
         <a href="javascript:void(0)" class="btn btn-solid" onclick="shunno_push_api()">
-          Push Notification!
+            Push Notification!
         </a>
-      </div>
+    </div>
 
 
     <!-- latest jquery-->
@@ -193,105 +196,33 @@
 
     <script>
         function shunno_push_api() {
-  if (!Notification) {
-    alert('Hello World!'); 
-    return;
-  }
+            if (!Notification) {
+                alert('Hello World!');
+                return;
+            }
 
-  if (Notification.permission !== "granted")
-    Notification.requestPermission();
+            if (Notification.permission !== "granted")
+                Notification.requestPermission();
 
-  var notification = new Notification("Multikart Sale", {
-    body: "Items on your wishlist just went on sale! ⚡",
-      title: "title",
-      icon: 'assets/images/favicon.png',
-  });
+            var notification = new Notification("Multikart Sale", {
+                body: "Items on your wishlist just went on sale! ⚡",
+                title: "title",
+                icon: 'assets/images/favicon.png',
+            });
 
-  notification.onclick = function () {
-    window.open("https://suchi9909.github.io/multikart-app/shop.html");      
-  };
-}
+            notification.onclick = function () {
+                window.open("https://suchi9909.github.io/multikart-app/shop.html");
+            };
+        }
 
-// var $notifyBtn = document.getElementById("btn-notify"),
-// 		notification, notificationIsPresent,
-// 		keyCodes = {
-// 			enter_key: 13,
-// 			escape_key : 27,
-// 			tab_key: 9,
-// 			space_key: 32,
-// 			up_key: 38,
-// 			down_key: 40,
-// 			left_key: 37,
-// 			right_key: 39
-// 		};
-
-// 		$notifyBtn.addEventListener("click", function(e){
-// 			e.preventDefault();
-			
-// 			// check for notifications support
-// 			if(!('Notification' in window)){
-// 				alert('Web Notification is not supported');
-// 				return;
-// 			}
-			
-// 			// ask for permission then send notification if granted
-// 			Notification.requestPermission(function(permission){
-// 				sendNotification(); // send notification
-// 			});
-			
-// 		});
-
-// 		function sendNotification(closeNote,delay){
-			
-// 			// set up notificaton object
-// 			notification = new Notification("Hello World",{
-// 				lang: "en",
-// 				body:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-// 				icon: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/codepen-round.png",
-// 				tag: "notify_1"
-// 			});
-			
-// 			// events onclick, onclose, onerror, onshow
-// 			// clicked the notification
-// 			notification.onclick = function() {
-// 				console.log("notification is clicked");
-// 			}
-			
-// 			// notification is shown
-// 			notification.onshow = function(item){
-// 				console.log("notification is shown");
-// 				notificationIsPresent = true;
-// 			}
-			
-// 			// notification error
-// 			notification.onerror = function(e){
-// 				console.log("notification error", e);
-// 			}
-			
-// 			// notification closed
-// 			notification.onclose = function(){
-// 				console.log("notification closed");
-// 				notificationIsPresent = false;
-// 			}
-				
-// 		} // sendNotification();
-
-// 		// esc keypress to close notification
-// 		window.addEventListener("keyup", function(e){
-
-// 			// grab key pressed
-// 			var code = (e.keyCode ? e.keyCode : e.which);
-			
-// 			// escape
-// 			if(code == keyCodes.escape_key){
-// 				if(notificationIsPresent){
-// 					notification.close();
-// 				}
-// 			}
-			
-// 		}, false);
-
-
+        navigator.serviceWorker.register('sw.js');
+        Notification.requestPermission(function (result) {
+            if (result === 'granted') {
+                navigator.serviceWorker.ready.then(function (registration) {
+                    registration.showNotification('Notification with ServiceWorker');
+                });
+            }
+        });
     </script>
 
 </body>

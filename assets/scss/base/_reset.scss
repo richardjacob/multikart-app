@@ -38,6 +38,10 @@ section,
 
 .pl-15 {
     padding-left: 15px;
+    [dir="rtl"] & {
+        padding-left: 0;
+        padding-right: 15px;
+    }
 }
 
 .pr-15 {
@@ -107,4 +111,8 @@ section,
     .light-purple2 {
         background-color: #E6E6FA;
     }
+}
+
+.offcanvas, .modal-content {
+    background-color: $white;
 }

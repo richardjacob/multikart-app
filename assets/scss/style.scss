@@ -6,42 +6,47 @@
 @import "base/typography";
 
 // components scss files
+@import "components/accordion";
+@import "components/alert";
 @import "components/animation";
 @import "components/button";
-@import "components/form";
+@import "components/dropdown";
 @import "components/faq";
+@import "components/form";
+@import "components/loader";
 @import "components/ratio";
 @import "components/slider";
 @import "components/switch";
-@import "components/dropdown";
 @import "components/tab";
 @import "components/timer";
 
+
 // layout scss files
-@import "layout/header";
 @import "layout/bottom-panel";
+@import "layout/header";
 @import "layout/product-box";
 
 // pages
-@import "pages/onboarding";
+@import "pages/about";
+@import "pages/apply-coupon";
 @import "pages/authentication";
-@import "pages/home";
+@import "pages/cart";
 @import "pages/category";
 @import "pages/delivery";
-@import "pages/shop";
-@import "pages/product";
-@import "pages/search";
-@import "pages/cart";
-@import "pages/apply-coupon";
-@import "pages/payment";
+@import "pages/element";
+@import "pages/home";
+@import "pages/notification";
+@import "pages/onboarding";
+@import "pages/order-history";
 @import "pages/order-success";
 @import "pages/order-tracking";
-@import "pages/order-history";
+@import "pages/payment";
+@import "pages/product";
 @import "pages/profile";
 @import "pages/saved-cards";
-@import "pages/about";
-@import "pages/notification";
+@import "pages/search";
 @import "pages/settings";
+@import "pages/shop";
 
 
 // themes scss files

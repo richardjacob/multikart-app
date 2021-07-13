@@ -52,6 +52,7 @@
 .payment-method-section {
     .card {
         border: none;
+        background-color: $white;
         + .card {
             margin-top: 12px;
         }
@@ -75,11 +76,22 @@
             input {
                 margin-left: auto;
                 margin-right: 0;
+                [dir="rtl"] & {
+                    margin-right: auto;
+                    margin-left: 0;
+                }
             }
         }
         img {
             width: 24px;
             margin-right: 13px;
+            [class="dark"] & {
+                filter: invert(1);
+            }
+            [dir="rtl"] & {
+                margin-right: 0;
+                margin-left: 13px;
+            }
         }
     }
 }

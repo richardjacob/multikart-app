@@ -26,6 +26,9 @@
                 background: $grey-light;
                 padding: 0;
                 transition: all 0.5s ease;
+                [class="dark"] & {
+                    background: #6e6e6e;
+                }
                 &:before {
                     display: none;
                 }

@@ -31,9 +31,6 @@
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/slick.css">
 
-    <!-- pricing slider css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/vendors/pricing-slider.css">
-
     <!-- iconly css -->
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/iconly.css">
 
@@ -44,6 +41,12 @@
 
 <body>
 
+    <!-- loader strat -->
+    <div class="loader">
+        <span></span>
+        <span></span>
+    </div>
+    <!-- loader end -->
 
 
     <!-- header start -->
@@ -113,25 +116,22 @@
             <h2 class="page-title">Type of address</h2>
             <form class="d-flex">
                 <div class="me-3">
-                    <input class="radio_animated" type="radio" name="gender" id="Home"
-                        value="male">
+                    <input class="radio_animated" type="radio" name="gender" id="Home" value="male">
                     <label for="Home" class="mb-2">Home</label>
                 </div>
-                <div  class="me-3">
-                    <input class="radio_animated" type="radio" name="gender" id="office"
-                        value="office">
+                <div class="me-3">
+                    <input class="radio_animated" type="radio" name="gender" id="office" value="office">
                     <label for="office" class="mb-2">Office</label>
                 </div>
                 <div>
-                    <input class="radio_animated" type="radio" name="gender" id="others"
-                        value="others">
+                    <input class="radio_animated" type="radio" name="gender" id="others" value="others">
                     <label for="others" class="mb-2">Others</label>
                 </div>
             </form>
             <div class="checkbox_animated">
                 <div>
                     <input type="checkbox" name="address" id="ten" value="male" checked>
-                    <label for="ten" class="mb-2">make default address  </label>
+                    <label for="ten" class="mb-2">make default address </label>
                 </div>
             </div>
         </div>

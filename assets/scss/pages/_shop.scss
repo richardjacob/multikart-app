@@ -38,6 +38,7 @@
         justify-content: center;
         i {
             font-size: 18px;
+            color: #ffffff;
         }
     }
     &.w-back {
@@ -77,6 +78,7 @@
         }
         .btn {
             font-size: 16px;
+            color: #ffffff;
         }
     }
     .filter-title {
@@ -168,7 +170,7 @@
         &.active {
             .filter-col {
                 background-color: $theme-color;
-                color: $white;
+                color: #ffffff;
                 transition: all 0.5s ease;
             }
         }

@@ -31,9 +31,6 @@
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/slick.css">
 
-    <!-- pricing slider css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/vendors/pricing-slider.css">
-
     <!-- iconly css -->
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/iconly.css">
 
@@ -44,6 +41,12 @@
 
 <body>
 
+    <!-- loader strat -->
+    <div class="loader">
+        <span></span>
+        <span></span>
+    </div>
+    <!-- loader end -->
 
 
     <!-- header start -->
@@ -85,34 +88,32 @@
         <div class="accordion" id="accordionExample">
             <div class="card">
                 <div class="card-header" id="h_one">
-                    <div class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#one"
-                        aria-expanded="true" aria-controls="one">
+                    <div class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#one" aria-expanded="true"
+                        aria-controls="one">
                         <label for='r_one'>
                             <img src="assets/images/payment/1.png" class="img-fluid" alt="">Cash On Delivery
-                            <input type='radio' class="radio_animated" checked id='r_one'
-                            name='occupation' value='Working' required />
+                            <input type='radio' class="radio_animated" checked id='r_one' name='occupation'
+                                value='Working' required />
                         </label>
                     </div>
                 </div>
-                <div id="one" class="collapse show" aria-labelledby="h_one"
-                    data-bs-parent="#accordionExample">
+                <div id="one" class="collapse show" aria-labelledby="h_one" data-bs-parent="#accordionExample">
                     <div class="card-body p-0">
                     </div>
                 </div>
             </div>
             <div class="card">
                 <div class="card-header" id="h_two">
-                    <div class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#two"
-                        aria-expanded="true" aria-controls="two">
+                    <div class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#two" aria-expanded="true"
+                        aria-controls="two">
                         <label for='r_two'>
                             <img src="assets/images/payment/1.png" class="img-fluid" alt="">Debit/Credit Card
-                            <input type='radio' class="radio_animated" id='r_two'
-                                name='occupation' value='Working' required /> 
+                            <input type='radio' class="radio_animated" id='r_two' name='occupation' value='Working'
+                                required />
                         </label>
                     </div>
                 </div>
-                <div id="two" class="collapse" aria-labelledby="h_two"
-                    data-bs-parent="#accordionExample">
+                <div id="two" class="collapse" aria-labelledby="h_two" data-bs-parent="#accordionExample">
                     <div class="card-body">
                         <form class="pt-2">
                             <div class="form-floating mb-4">
@@ -143,67 +144,66 @@
             </div>
             <div class="card">
                 <div class="card-header" id="h_three">
-                    <div class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#three"
-                        aria-expanded="true" aria-controls="three">
+                    <div class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#three" aria-expanded="true"
+                        aria-controls="three">
                         <label for='r_three'>
                             <img src="assets/images/payment/3.png" class="img-fluid" alt="">Wallets
-                            <input type='radio' class="radio_animated" id='r_three'
-                                name='occupation' value='Working' required /> 
+                            <input type='radio' class="radio_animated" id='r_three' name='occupation' value='Working'
+                                required />
                         </label>
                     </div>
                 </div>
-                <div id="three" class="collapse" aria-labelledby="h_three"
-                    data-bs-parent="#accordionExample">
+                <div id="three" class="collapse" aria-labelledby="h_three" data-bs-parent="#accordionExample">
                     <div class="card-body">
                         <form class="wallet-section">
                             <h4 class="page-title">select popular banks</h4>
                             <div class="">
                                 <div class="form-check ps-0">
-                                    <input class="radio_animated" type="radio"
-                                        name="exampleRadios1" id="Radios1" value="option1"
-                                        checked>
+                                    <input class="radio_animated" type="radio" name="exampleRadios1" id="Radios1"
+                                        value="option1" checked>
                                     <label class="form-check-label" for="Radios1">
                                         Industrial & Commercial Bank
                                     </label>
                                 </div>
                                 <div class="form-check ps-0">
-                                    <input class="radio_animated" type="radio"
-                                        name="exampleRadios1" id="Radios2" value="option2">
+                                    <input class="radio_animated" type="radio" name="exampleRadios1" id="Radios2"
+                                        value="option2">
                                     <label class="form-check-label" for="Radios2">
                                         Construction Bank Corp.
                                     </label>
                                 </div>
                                 <div class="form-check ps-0">
-                                    <input class="radio_animated" type="radio"
-                                        name="exampleRadios1" id="Radios3" value="option2">
+                                    <input class="radio_animated" type="radio" name="exampleRadios1" id="Radios3"
+                                        value="option2">
                                     <label class="form-check-label" for="Radios3">
                                         Agricultural Bank
                                     </label>
                                 </div>
                                 <div class="form-check ps-0">
-                                    <input class="radio_animated" type="radio"
-                                        name="exampleRadios1" id="Radios4" value="option2">
+                                    <input class="radio_animated" type="radio" name="exampleRadios1" id="Radios4"
+                                        value="option2">
                                     <label class="form-check-label" for="Radios4">
                                         HSBC Holdings
                                     </label>
                                 </div>
                                 <div class="form-check ps-0">
-                                    <input class="radio_animated" type="radio"
-                                        name="exampleRadios1" id="Radios5" value="option2">
+                                    <input class="radio_animated" type="radio" name="exampleRadios1" id="Radios5"
+                                        value="option2">
                                     <label class="form-check-label" for="Radios5">
                                         Bank of America
                                     </label>
                                 </div>
                                 <div class="form-check ps-0">
-                                    <input class="radio_animated" type="radio"
-                                        name="exampleRadios1" id="Radios6" value="option2">
+                                    <input class="radio_animated" type="radio" name="exampleRadios1" id="Radios6"
+                                        value="option2">
                                     <label class="form-check-label" for="Radios6">
                                         JPMorgan Chase & Co.
                                     </label>
                                 </div>
                             </div>
                             <div class="form-floating mt-3">
-                                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                <select class="form-select" id="floatingSelect"
+                                    aria-label="Floating label select example">
                                     <option selected value="1">Choose Bank...</option>
                                     <option value="2">ICICI</option>
                                     <option value="3">BOB</option>
@@ -220,64 +220,57 @@
             </div>
             <div class="card">
                 <div class="card-header" id="h_four">
-                    <div class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#four"
-                        aria-expanded="true" aria-controls="four">
+                    <div class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#four" aria-expanded="true"
+                        aria-controls="four">
                         <label for='r_four'>
                             <img src="assets/images/payment/4.png" class="img-fluid" alt="">Net Banking
-                            <input type='radio' class="radio_animated" id='r_four'
-                                name='occupation' value='Working' required /> 
+                            <input type='radio' class="radio_animated" id='r_four' name='occupation' value='Working'
+                                required />
                         </label>
                     </div>
                 </div>
-                <div id="four" class="collapse" aria-labelledby="h_four"
-                    data-bs-parent="#accordionExample">
+                <div id="four" class="collapse" aria-labelledby="h_four" data-bs-parent="#accordionExample">
                     <div class="card-body">
                         <form class="wallet-section">
                             <h4 class="page-title">select your wallet</h4>
                             <div class="">
                                 <div class="form-check ps-0">
-                                    <input class="radio_animated" type="radio"
-                                        name="exampleRadios2" id="exampleRadios1" value="option1"
-                                        checked>
+                                    <input class="radio_animated" type="radio" name="exampleRadios2" id="exampleRadios1"
+                                        value="option1" checked>
                                     <label class="form-check-label" for="exampleRadios1">
                                         Adyen
                                     </label>
                                 </div>
                                 <div class="form-check ps-0">
-                                    <input class="radio_animated" type="radio"
-                                        name="exampleRadios2" id="exampleRadios2"
+                                    <input class="radio_animated" type="radio" name="exampleRadios2" id="exampleRadios2"
                                         value="option2">
                                     <label class="form-check-label" for="exampleRadios2">
                                         Airtel Money
                                     </label>
                                 </div>
                                 <div class="form-check ps-0">
-                                    <input class="radio_animated" type="radio"
-                                        name="exampleRadios2" id="exampleRadios3"
+                                    <input class="radio_animated" type="radio" name="exampleRadios2" id="exampleRadios3"
                                         value="option2">
                                     <label class="form-check-label" for="exampleRadios3">
                                         AlliedWallet
                                     </label>
                                 </div>
                                 <div class="form-check ps-0">
-                                    <input class="radio_animated" type="radio"
-                                        name="exampleRadios2" id="exampleRadios4"
+                                    <input class="radio_animated" type="radio" name="exampleRadios2" id="exampleRadios4"
                                         value="option2">
                                     <label class="form-check-label" for="exampleRadios4">
                                         Apple Pay
                                     </label>
                                 </div>
                                 <div class="form-check ps-0">
-                                    <input class="radio_animated" type="radio"
-                                        name="exampleRadios2" id="exampleRadios5"
+                                    <input class="radio_animated" type="radio" name="exampleRadios2" id="exampleRadios5"
                                         value="option2">
                                     <label class="form-check-label" for="exampleRadios5">
                                         Brinks
                                     </label>
                                 </div>
                                 <div class="form-check ps-0">
-                                    <input class="radio_animated" type="radio"
-                                        name="exampleRadios2" id="exampleRadios6"
+                                    <input class="radio_animated" type="radio" name="exampleRadios2" id="exampleRadios6"
                                         value="option2">
                                     <label class="form-check-label" for="exampleRadios6">
                                         CardFree
@@ -303,10 +296,18 @@
         <h2 class="title">Order Details:</h2>
         <div class="order-details">
             <ul>
-                <li><h4>Bag total <span>$220.00</span></h4></li>
-                <li><h4>Bag savings <span class="text-green">-$20.00</span></h4></li>
-                <li><h4>Coupon Discount <a href="coupons.html" class="theme-color">Apply Coupon</a></h4></li>
-                <li><h4>Delivery <span>$50.00</span></h4></li>
+                <li>
+                    <h4>Bag total <span>$220.00</span></h4>
+                </li>
+                <li>
+                    <h4>Bag savings <span class="text-green">-$20.00</span></h4>
+                </li>
+                <li>
+                    <h4>Coupon Discount <a href="coupons.html" class="theme-color">Apply Coupon</a></h4>
+                </li>
+                <li>
+                    <h4>Delivery <span>$50.00</span></h4>
+                </li>
             </ul>
             <div class="total-amount">
                 <h4>Total Amount <span>$270.00</span></h4>

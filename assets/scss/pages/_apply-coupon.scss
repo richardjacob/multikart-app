@@ -26,6 +26,10 @@
                     text-transform: uppercase;
                     font-weight: 700;
                     margin-right: 10px;
+                    [dir="rtl"] & {
+                        margin-right: unset;
+                        margin-left: 10px;
+                    }
                 }
                 span {
                     background-color: $grey-light-45;
@@ -38,6 +42,10 @@
                     font-size: 14px;
                     font-weight: 700;
                     color: $theme-color;
+                    [dir="rtl"] & {
+                        margin-right: auto;
+                        margin-left: 0;
+                    }
                 }
             }
             p {

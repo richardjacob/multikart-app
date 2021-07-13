@@ -31,9 +31,6 @@
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/slick.css">
 
-    <!-- pricing slider css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/vendors/pricing-slider.css">
-
     <!-- iconly css -->
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/iconly.css">
 
@@ -44,12 +41,19 @@
 
 <body>
 
+    <!-- loader strat -->
+    <div class="loader">
+        <span></span>
+        <span></span>
+    </div>
+    <!-- loader end -->
+
 
 
     <!-- header start -->
     <header>
         <div class="back-links">
-            <a href="index.html">
+            <a href="home.html">
                 <i class="iconly-Arrow-Left icli"></i>
                 <div class="content">
                     <h2>Shopping Cart</h2>
@@ -75,7 +79,7 @@
                 <img src="assets/images/products/1.jpg" class="img-fluid" alt="">
             </a>
             <div class="cart-content">
-                <a href="#">
+                <a href="product.html">
                     <h4>Pink Hoodie t-shirt full </h4>
                 </a>
                 <h5 class="content-color">by Mango</h5>
@@ -107,7 +111,7 @@
                 <img src="assets/images/products/2.jpg" class="img-fluid" alt="">
             </a>
             <div class="cart-content">
-                <a href="#">
+                <a href="product.html">
                     <h4>Pink Hoodie t-shirt full </h4>
                 </a>
                 <h5 class="content-color">by Mango</h5>
@@ -123,11 +127,11 @@
                     </a>
                 </div>
                 <div class="cart-option">
-                    <h5><i class="iconly-Heart icli" data-bs-toggle="offcanvas" data-bs-target="#removecart"></i> Move
+                    <h5 data-bs-toggle="offcanvas" data-bs-target="#removecart"><i class="iconly-Heart icli"></i> Move
                         to
                         wishlist</h5>
                     <span class="divider-cls">|</span>
-                    <h5><i class="iconly-Delete icli" data-bs-toggle="offcanvas" data-bs-target="#removecart"></i>
+                    <h5 data-bs-toggle="offcanvas" data-bs-target="#removecart"><i class="iconly-Delete icli"></i>
                         Remove
                     </h5>
                 </div>
@@ -139,7 +143,7 @@
                 <img src="assets/images/products/3.jpg" class="img-fluid" alt="">
             </a>
             <div class="cart-content">
-                <a href="#">
+                <a href="product.html">
                     <h4>Pink Hoodie t-shirt full </h4>
                 </a>
                 <h5 class="content-color">by Mango</h5>
@@ -179,7 +183,7 @@
             <div>
                 <div class="product-box ratio_square">
                     <div class="img-part">
-                        <a href="#"><img src="assets/images/products/9.jpg" class="img-fluid bg-img"></a>
+                        <a href="product.html"><img src="assets/images/products/9.jpg" class="img-fluid bg-img"></a>
                         <div class="wishlist-btn">
                             <i class="iconly-Heart icli"></i>
                             <i class="iconly-Heart icbo"></i>
@@ -200,7 +204,7 @@
                             <li><i class="iconly-Star icbo"></i></li>
                             <li><i class="iconly-Star icli"></i></li>
                         </ul>
-                        <a href="#">
+                        <a href="product.html">
                             <h4>Blue Denim Jacket</h4>
                         </a>
                         <div class="price">
@@ -212,7 +216,7 @@
             <div>
                 <div class="product-box ratio_square">
                     <div class="img-part">
-                        <a href="#"><img src="assets/images/products/10.jpg" class="img-fluid bg-img"></a>
+                        <a href="product.html"><img src="assets/images/products/10.jpg" class="img-fluid bg-img"></a>
                         <div class="wishlist-btn">
                             <i class="iconly-Heart icli"></i>
                             <i class="iconly-Heart icbo"></i>
@@ -233,7 +237,7 @@
                             <li><i class="iconly-Star icbo"></i></li>
                             <li><i class="iconly-Star icli"></i></li>
                         </ul>
-                        <a href="#">
+                        <a href="product.html">
                             <h4>Blue Denim Jacket</h4>
                         </a>
                         <div class="price">
@@ -245,7 +249,7 @@
             <div>
                 <div class="product-box ratio_square">
                     <div class="img-part">
-                        <a href="#"><img src="assets/images/products/8.jpg" class="img-fluid bg-img"></a>
+                        <a href="product.html"><img src="assets/images/products/8.jpg" class="img-fluid bg-img"></a>
                         <div class="wishlist-btn">
                             <i class="iconly-Heart icli"></i>
                             <i class="iconly-Heart icbo"></i>
@@ -266,7 +270,7 @@
                             <li><i class="iconly-Star icbo"></i></li>
                             <li><i class="iconly-Star icli"></i></li>
                         </ul>
-                        <a href="#">
+                        <a href="product.html">
                             <h4>Blue Denim Jacket</h4>
                         </a>
                         <div class="price">
@@ -295,7 +299,7 @@
 
 
     <!-- order details start -->
-    <section class="px-15 pt-0">
+    <section id="order-details" class="px-15 pt-0">
         <h2 class="title">Order Details:</h2>
         <div class="order-details">
             <ul>
@@ -366,7 +370,7 @@
     <div class="cart-bottom">
         <div class="left-content">
             <h4>$270.00</h4>
-            <a href="#" class="theme-color">View details</a>
+            <a href="#order-details" class="theme-color">View details</a>
         </div>
         <a href="delivery.html" class="btn btn-solid">Place Order</a>
     </div>
@@ -388,7 +392,7 @@
                     </button>
                 </div>
             </div>
-            <a href="javascript:void(0)" class="btn btn-solid w-100" data-bs-dismiss="offcanvas">Add to Bag</a>
+            <a href="delivery.html" class="btn btn-solid w-100" data-bs-dismiss="offcanvas">Add to Bag</a>
         </div>
     </div>
     <!-- select qty offcanvas end -->

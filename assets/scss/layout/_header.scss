@@ -19,6 +19,10 @@ header {
                 color: $title-color;
                 font-size: 20px;
                 margin-right: 5px;
+                [dir="rtl"] & {
+                    margin-right: 0;
+                    margin-left: 5px;
+                }
             }
             .content {
                 h2 {
@@ -51,8 +55,18 @@ header {
         margin-right: 15px;
         display: flex;
         align-items: center;
+        [dir="rtl"] & {
+            margin-right: 0;
+            margin-left: 15px;
+        }
         svg {
             stroke: $title-color;
+        }
+        img {
+            width: 20px;
+            [class="dark"] & {
+                filter: invert(1);
+            }
         }
     }
     .brand-logo {
@@ -62,6 +76,10 @@ header {
     }
     .header-option {
         margin-left: auto;
+        [dir="rtl"] & {
+            margin-right: auto;
+            margin-left: 0;
+        }
         ul {
             display: flex;
             align-items: center;
@@ -76,6 +94,10 @@ header {
                 }
                 + li {
                     margin-left: 12px;
+                    [dir="rtl"] & {
+                        margin-right: 12px;
+                        margin-left: 0;
+                    }
                 }
             }
         }
@@ -95,7 +117,7 @@ header {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba($black, 0.3);
+    background-color: rgba(0,0,0, 0.3);
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s ease;
@@ -116,9 +138,17 @@ header {
     transition: all 0.5s ease;
     z-index: 2;
     overflow: auto;
+    [dir="rtl"] & {
+        left: unset;
+        right: -320px;
+    }
     &.show {
         left: 0;
         transition: all 0.5s ease;
+        [dir="rtl"] & {
+           left: unset;
+           right: 0;
+        }
     }
     .user-panel {
         padding: 16px;
@@ -132,6 +162,10 @@ header {
             border-radius: 100%;
             object-fit: cover;
             margin-right: 16px;
+            [dir="rtl"] & {
+                margin-right: 0;
+                margin-left: 16px;
+            }
         }
         .icli {
             margin-left: 8px;
@@ -163,9 +197,17 @@ header {
                     font-size: 20px;
                     color: $title-color;
                     margin-right: 16px;
+                    [dir="rtl"] & {
+                        margin-right: 0;
+                        margin-left: 16px;
+                    }
                 }
                 img {
                     margin-right: 16px;
+                    [dir="rtl"] & {
+                        margin-right: 0;
+                        margin-left: 16px;
+                    }
                     width: 20px;
                 }
                 .content {

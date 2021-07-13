@@ -14,7 +14,7 @@
                 border-radius: 3px;
                 padding: 15px 15px 50px;
                 position: relative;
-                label {
+                label { 
                     width: 100%;
                 }
                 .label {
@@ -27,6 +27,13 @@
                     font-weight: 700;
                     padding: 1px 6px;
                     border-radius: 2px;
+                    [class="dark"] & {
+                        color: #ffffff;
+                    }
+                    [dir="rtl"] & {
+                        left: 16px;
+                        right: unset;
+                    }
                 }
                 .name {
                     font-weight: 700;
@@ -46,6 +53,10 @@
                 left: 42px;
                 position: absolute;
                 bottom: 12px;
+                [dir="rtl"] & {
+                    right: 42px;
+                    left: unset;
+                }
                 a {
                     font-size: 14px;
                     text-transform: uppercase;
@@ -54,9 +65,17 @@
                     padding: 4px 10px;
                     display: inline-block;
                     margin-right: 10px;
+                    [dir="rtl"] & {
+                        margin-right: 0;
+                        margin-left: 10px;
+                    }
                 }
                 &.l-15 {
                     left: 15px;
+                    [dir="rtl"] & {
+                        right: 15px;
+                        left: unset;
+                    }
                 }
             }
             + li {

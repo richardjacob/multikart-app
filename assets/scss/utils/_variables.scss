@@ -22,8 +22,8 @@ $grey-light-25: rgba($grey-light, 0.25);
 // gradient 
 $gradient-1: linear-gradient(180deg, rgba(237, 239, 244, 0.3) 0%, #EDEFF4 100%);
 $gradient-2: linear-gradient(180deg, rgba(230, 230, 239, 0.3) 0%, #E6E6EF 100%);
-$gradient-3: linear-gradient(270.08deg, rgba(255, 255, 255, 0.33) 0.07%, #FFFFFF 81.25%);
-$gradient-4: linear-gradient(1.82deg, #FFFFFF 1.55%, rgba(255, 255, 255, 0.15) 98.46%);
+$gradient-3: linear-gradient(270.08deg, rgba($white, 0.33) 0.07%,$white 81.25%);
+$gradient-4: linear-gradient(1.82deg, $white 1.55%, rgba($white, 0.15) 98.46%);
 
 
 // shadow 

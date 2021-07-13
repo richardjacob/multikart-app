@@ -23,7 +23,7 @@
         &.active {
             background-color: $theme-color;
             a {
-                color: $white;
+                color: white;
             }
         }
     }
@@ -38,6 +38,10 @@
             height: 70px;
             object-fit: cover;
             margin-right: 12px;
+            [dir="rtl"] & {
+                margin-right: 0;
+                margin-left: 12px;
+            }
         }
         .media-body {
             h4 {

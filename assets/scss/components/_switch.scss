@@ -7,6 +7,10 @@
     align-items: center;
     label {
         margin-right: 20px;
+        [dir="rtl"] & {
+            margin-right: 0;
+            margin-left: 20px;
+        }
         span {
             display: block;
             color: #647589;
@@ -19,6 +23,10 @@
         overflow: hidden;
         border-radius: 100px;
         margin-left: auto;
+        [dir="rtl"] & {
+            margin-right: auto;
+            margin-left: 0;
+        }
         .knobs,
         .layer {
             position: absolute;
@@ -69,6 +77,9 @@
             &:after {
                 color: $white;
                 z-index: 2;
+                [class="dark"] & {
+                    color: #ffffff;
+                }
             }
             span {
                 left: 4px;

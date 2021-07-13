@@ -1,0 +1,30 @@
+/*=====================
+    Alert CSS start
+==========================*/
+
+.alert-classic {
+    .alert {
+        font-size: 15px;
+        background-color: transparent;
+        border-left-width: 5px;
+        i {
+            margin-right: 12px;
+            font-size: 20px;
+            [dir="rtl"] & {
+                margin-right: 0;
+                margin-left: 12px;
+            }
+        }
+    }
+    .alert-primary {
+        background-color: transparent;
+    }
+}
+
+.alert-dismissible {
+    .btn-close {
+        [class="dark"] & {
+            filter: invert(1);
+        }
+    }
+}

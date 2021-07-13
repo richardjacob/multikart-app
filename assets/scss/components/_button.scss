@@ -7,7 +7,6 @@ button:focus {
 }
 
 .btn {
-  font-weight: 700;
   font-size: 16px;
   padding: 6px 18px;
   text-transform: uppercase;
@@ -16,12 +15,19 @@ button:focus {
     outline: none;
     box-shadow: none;
   }
+  &.btn-sm {
+    font-size: 14px;
+    padding: 4px 14px;
+  }
 }
 
 .btn-solid {
   background-color: $theme-color;
   color: $white;
   font-weight: 400;
+  [class="dark"] & {
+    color: #ffffff;
+  }
 }
 
 .btn-outline {

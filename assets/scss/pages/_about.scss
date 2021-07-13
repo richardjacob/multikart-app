@@ -12,6 +12,13 @@
             margin-bottom: 10px;
             img {
                 margin-right: 10px;
+                [dir="rtl"] & {
+                    margin-right: 0;
+                    margin-left: 10px;
+                }
+                [class="dark"] & {
+                    filter: invert(1);
+                }
             }
             h2 {
                 font-weight: 500;

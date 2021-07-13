@@ -1,4 +1,15 @@
 /*=====================
+    Loader js 
+==========================*/
+$(window).on('load', function() {
+  setTimeout(function() {
+      $('.loader').fadeOut('slow');
+  }, 500);
+  $('.loader').remove('slow');
+});
+
+
+/*=====================
     Header sidebar 
 ==========================*/
 $(".nav-bar").click(function () {
@@ -195,3 +206,13 @@ $('.show-more').on('click', function (e) {
 
 
 
+
+$('#darkButton').change(function(){
+  if($(this).is(":checked")) {
+      $('body').addClass('dark');
+      $("#change-link").attr("href", "assets/css/dark.css");
+  } else {
+      $('body').removeClass('dark');
+      $("#change-link").attr("href", "assets/css/style.css");
+  }
+});
