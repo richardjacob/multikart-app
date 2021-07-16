@@ -892,6 +892,7 @@ button:focus {
   margin-bottom: 20px; }
   .theme-tab::-webkit-scrollbar {
     width: 0;
+    height: 0;
     background: transparent; }
   .theme-tab .nav-item + .nav-item {
     margin-left: 10px; }
@@ -2054,6 +2055,7 @@ header {
     white-space: nowrap; }
     .category-section .category-slide::-webkit-scrollbar {
       width: 0;
+      height: 0;
       background: transparent; }
     .category-section .category-slide li {
       display: inline-block;
