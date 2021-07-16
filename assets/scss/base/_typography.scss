@@ -9,6 +9,25 @@ body {
   margin: 0;
   color: $title-color;
   background-color: $white;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #dddddd;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #c9c9c9;
+  }
 }
 
 html {
@@ -54,7 +73,7 @@ a {
   color: $title-color;
   [dir="rtl"] & {
     text-align: right;
-}
+  }
   &:focus {
     box-shadow: none;
   }
