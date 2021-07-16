@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/pricing-slider.css">
 
     <!-- Theme css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" id="change-link" type="text/css" href="assets/css/style.css">
 
 </head>
 
@@ -69,22 +69,21 @@
     <!-- modal section start -->
     <section class="top-space lg-space px-15 pt-0">
         <div class="row g-3">
-            <li class="col-12"><a class="btn btn-outline w-100" data-bs-toggle="modal" data-bs-target="#filterModal"
-                    href="javascript:void(0)">Filter Selection</a></li>
-            <li class="col-12"><a class="btn btn-outline w-100" data-bs-toggle="offcanvas" data-bs-target="#selectQty"
-                    href="javascript:void(0)">Select Quantity</a></li>
-            <li class="col-12"><a class="btn btn-outline w-100" data-bs-toggle="offcanvas" data-bs-target="#selectSize"
-                    href="javascript:void(0)">Select Size</a></li>
-            <li class="col-12"><a class="btn btn-outline w-100" data-bs-toggle="offcanvas" data-bs-target="#removecart"
-                    href="javascript:void(0)">Remove Cart</a></li>
+            <div class="col-12"><a class="btn btn-outline w-100" data-bs-toggle="modal" data-bs-target="#filterModal"
+                    href="javascript:void(0)">Filter Selection</a></div>
+            <div class="col-12"><a class="btn btn-outline w-100" data-bs-toggle="offcanvas" data-bs-target="#selectQty"
+                    href="javascript:void(0)">Select Quantity</a></div>
+            <div class="col-12"><a class="btn btn-outline w-100" data-bs-toggle="offcanvas" data-bs-target="#selectSize"
+                    href="javascript:void(0)">Select Size</a></div>
+            <div class="col-12"><a class="btn btn-outline w-100" data-bs-toggle="offcanvas" data-bs-target="#removecart"
+                    href="javascript:void(0)">Remove Cart</a></div>
         </div>
     </section>
     <!-- modal section end -->
 
 
     <!--  filter modal start  -->
-    <div class="modal filter-modal" id="filterModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal filter-modal" id="filterModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="modal-header">
@@ -232,7 +231,6 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <!-- filter modal end -->
 

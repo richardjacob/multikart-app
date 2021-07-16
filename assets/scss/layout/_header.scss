@@ -190,7 +190,7 @@ header {
             width: 100%;
             padding: 16px 6px;
             border-bottom: 1px solid $grey-light-60;
-            a {
+            a, > div {
                 display: flex;
                 align-items: center;
                 i {

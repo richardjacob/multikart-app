@@ -28,6 +28,9 @@ button:focus {
   [class="dark"] & {
     color: #ffffff;
   }
+  &:hover {
+    color: #ffffff;
+  }
 }
 
 .btn-outline {

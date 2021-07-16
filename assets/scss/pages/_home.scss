@@ -195,11 +195,10 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-image: url(../images/bg.jpg);
             background-position: center;
             z-index: -1;
             background-blend-mode: overlay;
-            background-color: rgba($black, 0.02);
+            background-color: $grey-light-60;
             [class="dark"] & {
                 background-image: none;
             }

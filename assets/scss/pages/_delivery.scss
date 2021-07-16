@@ -16,6 +16,7 @@
                 position: relative;
                 label { 
                     width: 100%;
+                    position: absolute;
                 }
                 .label {
                     position: absolute;
@@ -43,10 +44,6 @@
                     h4 {
                         color: $content-color;
                     }
-                }
-                &.active {
-                    background-color: $theme-5;
-                    border: 1px solid $theme-color;
                 }
             }
             .buttons {
@@ -76,6 +73,12 @@
                         right: 15px;
                         left: unset;
                     }
+                }
+            }
+            &.active {
+                .check-box {
+                    background-color: $theme-5;
+                border: 1px solid $theme-color;
                 }
             }
             + li {

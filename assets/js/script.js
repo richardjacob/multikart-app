@@ -186,14 +186,6 @@ jQuery('.bg-img').each(function () {
 });
 
 
-/*=====================
- radio checkbox js
- ==========================*/
-$('.delivery-option-section li .check-box').on('click', function (e) {
-  $(this).addClass('active').parents("li").siblings().find(".check-box").removeClass('active');
-});
-
-
 /*========================
  Payment show more js
  ==========================*/
@@ -211,8 +203,29 @@ $('#darkButton').change(function(){
   if($(this).is(":checked")) {
       $('body').addClass('dark');
       $("#change-link").attr("href", "assets/css/dark.css");
+      localStorage.setItem('body', 'dark');
+      localStorage.setItem('layoutcss', 'assets/css/dark.css');
   } else {
       $('body').removeClass('dark');
       $("#change-link").attr("href", "assets/css/style.css");
+      localStorage.setItem('body', '');
+      localStorage.setItem('layoutcss', 'assets/css/style.css');
   }
 });
+
+$("body").attr("class",localStorage.getItem('body'));
+$("#change-link").attr("href",localStorage.getItem('layoutcss')?localStorage.getItem('layoutcss'):'assets/css/style.css');
+localStorage.getItem('body')?$('#darkButton').attr( 'checked', true ):'';
+
+
+$('#rtlButton').change(function(){
+  if($(this).is(":checked")) {
+      $("html").attr("dir", "rtl");
+      localStorage.setItem('dir', 'rtl');
+  } else {
+    $("html").attr("dir", '');
+    localStorage.setItem('dir', '');
+  }
+});
+$("html").attr("dir", localStorage.getItem('dir'));
+localStorage.getItem('dir')?$('#rtlButton').attr( 'checked', true ):'';

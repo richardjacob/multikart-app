@@ -418,6 +418,8 @@ button:focus {
   font-weight: 400; }
   [class="dark"] .btn-solid {
     color: #ffffff; }
+  .btn-solid:hover {
+    color: #ffffff; }
 
 .btn-outline {
   background-color: #2B2B2B;
@@ -1197,32 +1199,32 @@ header {
       width: 100%;
       padding: 16px 6px;
       border-bottom: 1px solid #232323; }
-      .sidebar-content .link-section li a {
+      .sidebar-content .link-section li a, .sidebar-content .link-section li > div {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center; }
-        .sidebar-content .link-section li a i {
+        .sidebar-content .link-section li a i, .sidebar-content .link-section li > div i {
           font-size: 20px;
           color: #EFEFEF;
           margin-right: 16px; }
-          [dir="rtl"] .sidebar-content .link-section li a i {
+          [dir="rtl"] .sidebar-content .link-section li a i, [dir="rtl"] .sidebar-content .link-section li > div i {
             margin-right: 0;
             margin-left: 16px; }
-        .sidebar-content .link-section li a img {
+        .sidebar-content .link-section li a img, .sidebar-content .link-section li > div img {
           margin-right: 16px;
           width: 20px; }
-          [dir="rtl"] .sidebar-content .link-section li a img {
+          [dir="rtl"] .sidebar-content .link-section li a img, [dir="rtl"] .sidebar-content .link-section li > div img {
             margin-right: 0;
             margin-left: 16px; }
-        .sidebar-content .link-section li a .content h4 {
+        .sidebar-content .link-section li a .content h4, .sidebar-content .link-section li > div .content h4 {
           color: #EFEFEF;
           margin-bottom: 2px;
           font-weight: 700;
           text-transform: capitalize; }
-        .sidebar-content .link-section li a .content h6 {
+        .sidebar-content .link-section li a .content h6, .sidebar-content .link-section li > div .content h6 {
           color: #BABABA;
           text-transform: capitalize; }
       .sidebar-content .link-section li:first-child {
@@ -1414,44 +1416,46 @@ header {
 
 .coupon-listing {
   margin-top: 22px; }
-  .coupon-listing li .coupon-box .top-bar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    .coupon-listing li .coupon-box .top-bar h4 {
-      text-transform: uppercase;
-      font-weight: 700;
-      margin-right: 10px; }
-      [dir="rtl"] .coupon-listing li .coupon-box .top-bar h4 {
-        margin-right: unset;
-        margin-left: 10px; }
-    .coupon-listing li .coupon-box .top-bar span {
-      background-color: #232323;
-      padding: 3px 8px;
-      border-radius: 2px; }
-    .coupon-listing li .coupon-box .top-bar a {
-      text-transform: uppercase;
-      margin-left: auto;
-      font-size: 14px;
-      font-weight: 700;
-      color: #FF4C3B; }
-      [dir="rtl"] .coupon-listing li .coupon-box .top-bar a {
-        margin-right: auto;
-        margin-left: 0; }
-  .coupon-listing li .coupon-box p {
-    color: #BABABA;
-    font-size: 12px;
-    margin-bottom: 6px;
-    margin-top: 2px; }
-  .coupon-listing li .coupon-box h6 {
-    font-size: 12px; }
-  .coupon-listing li + li {
-    padding-top: 20px;
-    margin-top: 20px;
-    border-top: 1px solid #232323; }
+  .coupon-listing li {
+    display: block; }
+    .coupon-listing li .coupon-box .top-bar {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .coupon-listing li .coupon-box .top-bar h4 {
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-right: 10px; }
+        [dir="rtl"] .coupon-listing li .coupon-box .top-bar h4 {
+          margin-right: unset;
+          margin-left: 10px; }
+      .coupon-listing li .coupon-box .top-bar span {
+        background-color: #232323;
+        padding: 3px 8px;
+        border-radius: 2px; }
+      .coupon-listing li .coupon-box .top-bar a {
+        text-transform: uppercase;
+        margin-left: auto;
+        font-size: 14px;
+        font-weight: 700;
+        color: #FF4C3B; }
+        [dir="rtl"] .coupon-listing li .coupon-box .top-bar a {
+          margin-right: auto;
+          margin-left: 0; }
+    .coupon-listing li .coupon-box p {
+      color: #BABABA;
+      font-size: 12px;
+      margin-bottom: 6px;
+      margin-top: 2px; }
+    .coupon-listing li .coupon-box h6 {
+      font-size: 12px; }
+    .coupon-listing li + li {
+      padding-top: 20px;
+      margin-top: 20px;
+      border-top: 1px solid #232323; }
 
 /*========================
     authentication CSS start
@@ -1937,7 +1941,8 @@ header {
     padding: 15px 15px 50px;
     position: relative; }
     .delivery-option-section ul li .check-box label {
-      width: 100%; }
+      width: 100%;
+      position: absolute; }
     .delivery-option-section ul li .check-box .label {
       position: absolute;
       top: 14px;
@@ -1959,9 +1964,6 @@ header {
       margin: 6px 0 8px 0; }
       .delivery-option-section ul li .check-box .addess h4 {
         color: #BABABA; }
-    .delivery-option-section ul li .check-box.active {
-      background-color: rgba(255, 76, 59, 0.05);
-      border: 1px solid #FF4C3B; }
   .delivery-option-section ul li .buttons {
     left: 42px;
     position: absolute;
@@ -1985,6 +1987,9 @@ header {
       [dir="rtl"] .delivery-option-section ul li .buttons.l-15 {
         right: 15px;
         left: unset; }
+  .delivery-option-section ul li.active .check-box {
+    background-color: rgba(255, 76, 59, 0.05);
+    border: 1px solid #FF4C3B; }
   .delivery-option-section ul li + li {
     margin-top: 15px; }
 
@@ -2166,11 +2171,10 @@ header {
     top: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../images/bg.jpg);
     background-position: center;
     z-index: -1;
     background-blend-mode: overlay;
-    background-color: rgba(255, 255, 255, 0.02); }
+    background-color: #232323; }
     [class="dark"] .offer-corner-section .offer-box:after {
       background-image: none; }
   .offer-corner-section .offer-box a {
@@ -2490,6 +2494,7 @@ header {
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease; }
     .offer-listing ul li {
+      display: block;
       font-size: 12px;
       color: #BABABA;
       padding: 14px 16px;
@@ -2837,7 +2842,7 @@ header {
       margin-bottom: 8px; }
     .profile-detail .media .media-body .edit-btn {
       background-color: #FF4C3B;
-      color: #2B2B2B;
+      color: #ffffff;
       font-size: 14px;
       font-weight: 700;
       padding: 2px 10px;
