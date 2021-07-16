@@ -105,19 +105,10 @@ body {
   font-size: 14px;
   margin: 0;
   color: #EFEFEF;
-  background-color: #2B2B2B;
-  /* width */
-  /* Track */
-  /* Handle */
-  /* Handle on hover */ }
+  background-color: #2B2B2B; }
   body::-webkit-scrollbar {
-    width: 3px; }
-  body::-webkit-scrollbar-track {
-    background: #f1f1f1; }
-  body::-webkit-scrollbar-thumb {
-    background: #dddddd; }
-  body::-webkit-scrollbar-thumb:hover {
-    background: #c9c9c9; }
+    width: 0;
+    background: transparent; }
 
 html {
   scroll-behavior: smooth; }
@@ -899,6 +890,9 @@ button:focus {
   overflow-x: scroll;
   overflow-y: hidden;
   margin-bottom: 20px; }
+  .theme-tab::-webkit-scrollbar {
+    width: 0;
+    background: transparent; }
   .theme-tab .nav-item + .nav-item {
     margin-left: 10px; }
     [dir="rtl"] .theme-tab .nav-item + .nav-item {
