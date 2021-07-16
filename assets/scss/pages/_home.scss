@@ -24,6 +24,10 @@
         overflow-x: scroll;
         overflow-y: hidden;
         white-space: nowrap;
+        &::-webkit-scrollbar {
+            width: 0;  
+            background: transparent;  
+        }
         li {
             display: inline-block;
             width: 84px;

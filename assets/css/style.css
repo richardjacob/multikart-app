@@ -2052,6 +2052,9 @@ header {
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap; }
+    .category-section .category-slide::-webkit-scrollbar {
+      width: 0;
+      background: transparent; }
     .category-section .category-slide li {
       display: inline-block;
       width: 84px;
