@@ -2047,8 +2047,18 @@ header {
 .category-section {
   padding-top: 0;
   overflow: hidden; }
-  .category-section .slick-default .slick-list {
-    margin-left: -28px; }
+  .category-section .category-slide {
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap; }
+    .category-section .category-slide li {
+      display: inline-block;
+      width: 84px;
+      text-align: center; }
+      @media (max-width: 480px) {
+        .category-section .category-slide li {
+          width: 74px; } }
   .category-section .category-box {
     text-align: center; }
     .category-section .category-box img {
