@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 
     <!-- bootstrap css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/vendors/bootstrap.css">
+    <link rel="stylesheet" id="rtl-link" type="text/css" href="assets/css/vendors/bootstrap.css">
 
     <!-- slick css -->
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/slick-theme.css">
@@ -64,7 +64,7 @@
 
 
     <!-- search panel start -->
-    <div class="search-panel top-space xl-space px-15">
+    <div class="search-panel top-space px-15">
         <div class="search-bar">
             <input class="form-control form-theme" placeholder="Search">
             <i class="iconly-Search icli search-icon"></i>
@@ -169,7 +169,7 @@
                     <ul>
                         <li data-bs-toggle="offcanvas" data-bs-target="#offcanvasreview"><i
                                 class="iconly-Star icli"></i> Rate & Review Product</li>
-                        <li class="ms-2"><i class="iconly-Star icli"></i> Need Help?</li>
+                        <li><i class="iconly-Star icli"></i> Need Help?</li>
                     </ul>
                 </div>
             </li>
@@ -201,7 +201,7 @@
                     <ul>
                         <li data-bs-toggle="offcanvas" data-bs-target="#offcanvasreview"><i
                                 class="iconly-Star icli"></i> Rate & Review Product</li>
-                        <li class="ms-2"><i class="iconly-Star icli"></i> Need Help?</li>
+                        <li><i class="iconly-Star icli"></i> Need Help?</li>
                     </ul>
                 </div>
             </li>
@@ -221,7 +221,7 @@
                     <li><i class="iconly-Star icbo"></i></li>
                     <li><i class="iconly-Star icbo"></i></li>
                     <li><i class="iconly-Star icbo"></i></li>
-                    <li><i class="iconly-Star icli"></i></li>
+                    <li><i class="iconly-Star icbo empty"></i></li>
                 </ul>
             </div>
             <h4 class="content-color mt-2 mb-2">Review:</h4>
@@ -245,40 +245,40 @@
         <div class="offcanvas-body">
             <h2 class="mb-2">Filters</h2>
             <form class="mb-2">
-                <div class="me-3">
+                <div class="me-3 d-flex align-items-center mb-2">
                     <input checked class="radio_animated" type="radio" name="filter" id="all" value="all">
-                    <label for="all" class="mb-2 content-color">All Orders</label>
+                    <label for="all" class="content-color">All Orders</label>
                 </div>
-                <div class="me-3">
+                <div class="me-3 d-flex align-items-center mb-2">
                     <input class="radio_animated" type="radio" name="filter" id="open" value="open">
-                    <label for="open" class="mb-2 content-color">Open Orders</label>
+                    <label for="open" class="content-color">Open Orders</label>
                 </div>
-                <div>
+                <div class="d-flex align-items-center mb-2">
                     <input class="radio_animated" type="radio" name="filter" id="return" value="return">
-                    <label for="return" class="mb-2 content-color">Return Orders</label>
+                    <label for="return" class="content-color">Return Orders</label>
                 </div>
-                <div>
+                <div class="d-flex align-items-center mb-2">
                     <input class="radio_animated" type="radio" name="filter" id="cancelled" value="cancelled">
-                    <label for="cancelled" class="mb-2 content-color">Cancelled Orders</label>
+                    <label for="cancelled" class="content-color">Cancelled Orders</label>
                 </div>
             </form>
             <h2 class="mb-2">Time Filter</h2>
             <form class="section-b-space mb-3">
-                <div class="me-3">
+                <div class="me-3 d-flex align-items-center mb-2">
                     <input checked class="radio_animated" type="radio" name="time" id="last30" value="last30">
-                    <label for="last30" class="mb-2 content-color">Last 30 Days</label>
+                    <label for="last30" class="content-color">Last 30 Days</label>
                 </div>
-                <div class="me-3">
+                <div class="me-3 d-flex align-items-center mb-2">
                     <input class="radio_animated" type="radio" name="time" id="last6" value="last6">
-                    <label for="last6" class="mb-2 content-color">Last 6 Months</label>
+                    <label for="last6" class="content-color">Last 6 Months</label>
                 </div>
-                <div>
+                <div class="d-flex align-items-center mb-2">
                     <input class="radio_animated" type="radio" name="time" id="2021" value="2021">
-                    <label for="2021" class="mb-2 content-color">2021</label>
+                    <label for="2021" class="content-color">2021</label>
                 </div>
-                <div>
+                <div class="d-flex align-items-center mb-2">
                     <input class="radio_animated" type="radio" name="time" id="2020" value="2020">
-                    <label for="2020" class="mb-2 content-color">2020</label>
+                    <label for="2020" class="content-color">2020</label>
                 </div>
             </form>
             <div class="cart-bottom row m-0">

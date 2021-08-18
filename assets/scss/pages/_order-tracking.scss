@@ -34,7 +34,6 @@
     transition: all 0.3s height 0.3s;
     transform-origin: top center;
     flex-direction: column;
-    padding-left: 35px;
     padding-top: 30px;
     .order-track-step {
         display: flex;
@@ -43,6 +42,10 @@
         .order-track-status {
             margin-right: 14px;
             position: relative;
+            [dir="rtl"] & {
+                margin-left: 14px;
+                margin-right: 0;
+            }
             .order-track-status-dot {
                 display: block;
                 width: 20px;
@@ -109,8 +112,28 @@
 
 .rate-section {
     margin-top: 10px;
-    li {
-        color: $content-color;
+    ul {
+        display: flex;
+        align-items: center;
+        li {
+            color: $content-color;
+            display: flex;
+            align-items: center;
+            i {
+                margin-right: 4px;
+                [dir="rtl"] & {
+                    margin-right: 0;
+                    margin-left: 4px;
+                }
+            }
+            + li {
+                margin-left: 12px;
+                [dir="rtl"] & {
+                    margin-right: 12px;
+                    margin-left: 0;
+                }
+            }
+        }
     }
 }
 

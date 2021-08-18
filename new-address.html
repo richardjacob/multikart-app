@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 
     <!-- bootstrap css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/vendors/bootstrap.css">
+    <link rel="stylesheet" id="rtl-link" type="text/css" href="assets/css/vendors/bootstrap.css">
 
     <!-- slick css -->
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/slick-theme.css">
@@ -104,7 +104,7 @@
             </div>
             <div class="form-floating mb-4">
                 <select class="form-select" id="floatingSelect1" aria-label="Floating label select example">
-                    <option selected value="1">Select state</option>
+                    <option selected disabled value="1">Select state</option>
                     <option value="2">state</option>
                     <option value="3">state</option>
                 </select>
@@ -115,23 +115,23 @@
         <div class="type-address px-15">
             <h2 class="page-title">Type of address</h2>
             <form class="d-flex">
-                <div class="me-3">
+                <div class="me-3 d-flex align-items-center mb-2">
                     <input class="radio_animated" type="radio" name="gender" id="Home" value="male">
-                    <label for="Home" class="mb-2">Home</label>
+                    <label for="Home">Home</label>
                 </div>
-                <div class="me-3">
+                <div class="me-3 d-flex align-items-center mb-2">
                     <input class="radio_animated" type="radio" name="gender" id="office" value="office">
-                    <label for="office" class="mb-2">Office</label>
+                    <label for="office">Office</label>
                 </div>
-                <div>
+                <div class="d-flex align-items-center mb-2">
                     <input class="radio_animated" type="radio" name="gender" id="others" value="others">
-                    <label for="others" class="mb-2">Others</label>
+                    <label for="others">Others</label>
                 </div>
             </form>
             <div class="checkbox_animated">
-                <div>
+                <div class="d-flex align-items-center mb-2">
                     <input type="checkbox" name="address" id="ten" value="male" checked>
-                    <label for="ten" class="mb-2">make default address </label>
+                    <label for="ten">make default address </label>
                 </div>
             </div>
         </div>

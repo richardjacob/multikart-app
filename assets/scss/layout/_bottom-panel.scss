@@ -5,7 +5,7 @@
 .bottom-panel {
     position: fixed;
     left: 0;
-    bottom: 0;
+    bottom: -1px;
     width: 100%;
     z-index: 1;
     background-color: $white;

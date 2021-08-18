@@ -26,6 +26,12 @@
             margin-left: 14px;
         }
     }
+    .media-body {
+        width: 50%;
+        @media (max-width: 340px) {
+            width: 46%;
+        }
+    }
     .status-label {
         position: absolute;
         right: 0;

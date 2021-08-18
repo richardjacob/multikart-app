@@ -24,6 +24,9 @@
             margin-top: -6px;
             margin-right: -10px;
             filter: invert(1);
+            [dir="rtl"] & {
+                margin-right: auto;
+            }
         }
     }
 }

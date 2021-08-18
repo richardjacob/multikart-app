@@ -7,10 +7,10 @@ header {
     padding: 15px;
     position: fixed;
     left: 0;
-    top: 0;
+    top: -1px;
     width: 100%;
     background-color: $white;
-    z-index: 2;
+    z-index: 3;
     .back-links {
         a {
             display: flex;
@@ -18,10 +18,10 @@ header {
             i {
                 color: $title-color;
                 font-size: 20px;
-                margin-right: 5px;
+                margin-right: 10px;
                 [dir="rtl"] & {
                     margin-right: 0;
-                    margin-left: 5px;
+                    margin-left: 10px;
                 }
             }
             .content {
@@ -121,7 +121,7 @@ header {
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s ease;
-    z-index: 2;
+    z-index: 3;
     &.show {
         opacity: 1;
         visibility: visible;
@@ -136,7 +136,7 @@ header {
     width: 310px;
     height: 100vh;
     transition: all 0.5s ease;
-    z-index: 2;
+    z-index: 3;
     overflow: auto;
     [dir="rtl"] & {
         left: unset;

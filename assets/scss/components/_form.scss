@@ -3,13 +3,19 @@
 ==========================*/
 .form-control, .form-select {
     background-color: $white;
+    color: $title-color;
+    &:focus {
+        background-color: $white;
+        border-color: #ced4da;
+        color: $title-color;
+    }
 }
 
 .radio_animated {
     position: relative;
-    margin: 0 1rem 0 0;
+    margin: -2px 1rem 0 1px;
     [dir="rtl"] & {
-        margin: 0 0 0 1rem;
+        margin: -2px 1px 0 1rem;
     }
     cursor: pointer;
     &:before {

@@ -41,4 +41,7 @@ button:focus {
   &.content-color {
     border-color: $content-color;
   }
+  &:hover {
+    color: $theme-color;
+  }
 }

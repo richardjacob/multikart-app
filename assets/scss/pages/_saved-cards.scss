@@ -18,22 +18,22 @@
         height: 100%;
         top: 0;
         z-index: 1;
-        background: linear-gradient(268.4deg, #000000 2.3%, #FFFFFF 177.41%);
+        background: linear-gradient(0deg, #000000 2.3%, #FFFFFF 177.41%);
         background-blend-mode: screen;
         mix-blend-mode: screen;
         opacity: 0.3;
         transform: skew(30deg);
     }
     &.blue-card  {
-        background: linear-gradient(32.2deg, #ADD8E6 -3.73%, #056787 106.54%);
+        background: linear-gradient(0deg, #ADD8E6 -3.73%, #056787 106.54%);
         box-shadow: 0px 3px 3px rgba(130, 187, 205, 0.46);
     }
     &.yellow-card {
-        background: linear-gradient(32.2deg, #FFD094 -3.73%, #9B7C2B 106.54%);
+        background: linear-gradient(0deg, #FFD094 -3.73%, #9B7C2B 106.54%);
         box-shadow: 0px 3px 3px rgba(223, 181, 114, 0.46);
     }
     &.pink-card {
-        background: linear-gradient(32.2deg, rgba(84, 80, 83, 0.8) -3.73%, rgba(255, 0, 214, 0.2) 106.54%);
+        background: linear-gradient(0deg, rgba(84, 80, 83, 0.8) -3.73%, rgba(255, 0, 214, 0.2) 106.54%);
         box-shadow: 0px 3px 3px rgba(201, 96, 170, 0.46);
     }
     .card-top {

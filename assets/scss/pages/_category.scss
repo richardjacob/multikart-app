@@ -19,10 +19,16 @@
             h2 {
                 text-transform: uppercase;
                 color: $title-color;
+                margin-top: -5px;
             }
             h4 {
                 color: $content-color;
                 margin-top: 5px;
+                margin-bottom: -1px;
+                white-space: nowrap;
+                max-width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
         }
         + .category-wrap {
@@ -37,7 +43,7 @@
                 left: 10px;
             }
             img {
-                height: 105px;
+                height:  calc(85px + (105 - 85) * ((100vw - 320px) / (1920 - 320)));
             }
         }
         &:nth-child(even) {
@@ -96,11 +102,17 @@
         font-size: 16px;
         color: $title-color;
         box-shadow: none;
+        &.collapsed {
+            &:after {
+                content: "\e903";
+            }
+        }
         &:after {
             background: none;
-            content: "\e903";
+            content: "\e912";
             font-family: 'iconly' !important;
             font-weight: 200;
+            transform: none;
         }
         &:focus {
             box-shadow: none;

@@ -1,3 +1,15 @@
+/*========================
+ Manifest js
+ ==========================*/
+ window.onload = () => {
+  'use strict';
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+             .register('sw.js');
+  }
+}
+
+
 /*=====================
     Loader js 
 ==========================*/
@@ -117,10 +129,9 @@ $('.brand-slider').slick({
   arrows: false,
 });
 
-
 $('.product-slider').slick({
   infinite: true,
-  slidesToShow: 2,
+  slidesToShow: 3,
   slidesToScroll: 1,
   centerMode: true,
   centerPadding: '60px',
@@ -128,14 +139,20 @@ $('.product-slider').slick({
   arrows: false,
   responsive: [
     {
-      breakpoint: 360,
+      breakpoint: 576,
       settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 365,
+      settings: {
+        slidesToShow: 2,
         centerPadding: '20px',
       }
     }
   ]
 });
-
 
 $('.payment-slider').slick({
   infinite: true,
@@ -146,7 +163,6 @@ $('.payment-slider').slick({
   dots: false,
   arrows: false,
 });
-
 
 $('.onboarding-slider').slick({
   centerMode: true,
@@ -197,8 +213,9 @@ $('.show-more').on('click', function (e) {
 });
 
 
-
-
+/*========================
+ Dark local storage setting js
+ ==========================*/
 $('#darkButton').change(function(){
   if($(this).is(":checked")) {
       $('body').addClass('dark');
@@ -218,14 +235,43 @@ $("#change-link").attr("href",localStorage.getItem('layoutcss')?localStorage.get
 localStorage.getItem('body')?$('#darkButton').attr( 'checked', true ):'';
 
 
+/*========================
+ RTL local storage setting js
+ ==========================*/
 $('#rtlButton').change(function(){
   if($(this).is(":checked")) {
       $("html").attr("dir", "rtl");
+      $("#rtl-link").attr("href", "assets/css/vendors/bootstrap.rtl.css");
+      localStorage.setItem('rtlcss', 'assets/css/vendors/bootstrap.rtl.css');
       localStorage.setItem('dir', 'rtl');
   } else {
     $("html").attr("dir", '');
     localStorage.setItem('dir', '');
+    $("#rtl-link").attr("href", "assets/css/vendors/bootstrap.css");
+    localStorage.setItem('rtlcss', 'assets/css/vendors/bootstrap.css');
   }
 });
 $("html").attr("dir", localStorage.getItem('dir'));
+$("#rtl-link").attr("href",localStorage.getItem('rtlcss')?localStorage.getItem('rtlcss'):'assets/css/vendors/bootstrap.css');
 localStorage.getItem('dir')?$('#rtlButton').attr( 'checked', true ):'';
+
+
+
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    deferredPrompt = e;
+});
+
+const installApp = document.getElementById('installApp');
+
+installApp.addEventListener('click', async () => {
+    if (deferredPrompt !== null) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        if (outcome === 'accepted') {
+            deferredPrompt = null;
+        }
+    }
+});
+

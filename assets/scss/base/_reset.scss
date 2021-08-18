@@ -66,6 +66,9 @@ section,
 
 .title-color {
     color: $title-color;
+    &:hover {
+        color: $title-color;
+    }
 }
 
 .listing-section {
