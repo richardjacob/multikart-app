@@ -136,15 +136,15 @@
     li {
         margin: 4px 7px;
         .color-box {
-            width: 35px;
-            height: 35px;
+            width: 28px;
+            height: 28px;
             border-radius: 100%;
             position: relative;
             &:after {
                 content: "";
                 background-image: url("../svg/tick.svg");
-                top: 12px;
-                right: 8px;
+                top: 8px;
+                right: 5px;
                 height: 17px;
                 width: 17px;
                 background-repeat: no-repeat;
@@ -156,7 +156,7 @@
         &.active {
             .color-box {
                 &:after {
-                    transform: scale(1);
+                    transform: scale(0.8);
                     transition: all 0.3s ease;
                 }
             }

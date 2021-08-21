@@ -12,6 +12,11 @@
     .product-inline-content {
         width: 60%;
         padding-right: 10px;
+        .price {
+            h4 {
+                font-weight: 400;
+            }
+        }
         h4 {
             margin-bottom: 3px;
             color: $title-color;
@@ -20,6 +25,7 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
+            font-weight: 600;
         }
         h5 {
             color: $content-color;
@@ -133,6 +139,12 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
+            font-weight: 700;
+        }
+        .price {
+            h4 {
+                font-weight: 400;
+            }
         }
     }
 }

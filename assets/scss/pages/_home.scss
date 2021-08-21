@@ -48,7 +48,8 @@
             margin-top: 5px;
             text-transform: capitalize;
             color: $title-color;
-            font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (1920 - 320)));
+            font-size: 14px;
+            font-weight: 700;
         }
     }
 }
@@ -81,7 +82,7 @@
                 margin-top: -4px;
             }
             h6 {
-                color: $content-color;
+                color: $title-color;
                 margin-bottom: 8px;
                 [class="dark"] & {
                     color:  #777777;
@@ -183,7 +184,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: calc(50px + (90 - 50) * ((100vw - 320px) / (1920 - 320)));
+        min-height: calc(40px + (90 - 40) * ((100vw - 320px) / (1920 - 320)));
         img {
             [class="dark"] & {
                 filter: invert(0.8);

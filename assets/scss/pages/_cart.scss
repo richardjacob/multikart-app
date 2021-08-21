@@ -221,6 +221,9 @@
     .left-content {
         width: 42%;
         padding-left: 0;
+        h4 {
+            font-weight: 700;
+        }
         [dir="rtl"] & {
             padding-left: 0;
             padding-right: 25px;

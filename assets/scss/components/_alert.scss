@@ -3,10 +3,17 @@
 ==========================*/
 
 .alert-classic {
+    .alert-dismissible {
+        .btn-close {
+            padding: 12px;
+        }
+    }
     .alert {
         font-size: 15px;
         background-color: transparent;
         border-left-width: 5px;
+        padding: 8px;
+        padding-right: 40px;
         i {
             margin-right: 12px;
             font-size: 20px;
