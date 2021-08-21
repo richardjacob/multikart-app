@@ -98,6 +98,25 @@ section,
 .offcanvas, .modal-content {
   background-color: #ffffff; }
 
+@media (min-width: 767px) {
+  body {
+    max-width: 600px;
+    margin: 0 auto !important; }
+  header {
+    max-width: 600px;
+    left: 50% !important;
+    -webkit-transform: translateX(-50%) !important;
+            transform: translateX(-50%) !important; }
+  .bottom-panel ul {
+    max-width: 600px;
+    margin: 0 auto; }
+  .fixed-panel .row {
+    max-width: 600px;
+    margin: 0 auto; }
+  .cart-bottom > div {
+    max-width: 600px;
+    margin: 0 auto; } }
+
 /*=====================
     Typography CSS start
 ==========================*/
@@ -1237,6 +1256,9 @@ header {
       color: #222222;
       font-size: 14px;
       font-weight: 700; }
+  @media (max-width: 340px) {
+    .header-sidebar {
+      width: 290px; } }
 
 .sidebar-content {
   padding: 25px 0; }
@@ -1808,16 +1830,17 @@ header {
   left: 0;
   bottom: 0;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
   padding: 7px 10px;
   z-index: 1; }
+  .cart-bottom > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   [class="dark"] .cart-bottom {
     -webkit-box-shadow: 6px 0px 4px rgba(0, 0, 0, 0.17);
             box-shadow: 6px 0px 4px rgba(0, 0, 0, 0.17); }
@@ -2182,6 +2205,8 @@ header {
         color: #FF4C3B;
         font-weight: 700;
         margin: 6px 0; }
+      .home-section .slider-box .slider-content h2 {
+        margin-top: -4px; }
       .home-section .slider-box .slider-content h6 {
         color: #777777;
         margin-bottom: 8px; }
@@ -2210,6 +2235,8 @@ header {
 
 .title-section {
   margin-bottom: 15px; }
+  .title-section h2 {
+    margin-top: -5px; }
   .title-section h3 {
     color: #777777; }
 
@@ -2236,7 +2263,7 @@ header {
       left: 0; }
     @media (max-width: 767px) {
       .banner-timer .banner-bg .banner-img {
-        width: 52%; } }
+        width: 44%; } }
     @media (max-width: 576px) {
       .banner-timer .banner-bg .banner-img {
         width: 55%; } }
@@ -2303,7 +2330,8 @@ header {
     padding: 12px 8px;
     font-size: 16px;
     color: #222222;
-    text-transform: uppercase; }
+    text-transform: capitalize;
+    letter-spacing: 0.05em; }
 
 /*=====================
     Notification CSS start
@@ -2320,12 +2348,13 @@ header {
   overflow-y: hidden;
   margin-bottom: 20px; }
   .filter-title li {
-    padding: 8px 22px;
     background-color: rgba(237, 239, 244, 0.45);
     text-transform: capitalize;
     border-radius: 3px !important;
     margin-right: 15px; }
     .filter-title li a {
+      padding: 8px 22px;
+      display: block;
       color: #222222;
       white-space: nowrap; }
     .filter-title li.active {

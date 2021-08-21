@@ -208,11 +208,13 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    display: flex;
-    align-items: center;
     box-shadow: $shadow-1;
     padding: 7px 10px;
     z-index: 1;
+    > div  {
+        display: flex;
+        align-items: center;
+    }
     [class="dark"] & {
         box-shadow: 6px 0px 4px rgba(0, 0, 0, 0.17);
     }

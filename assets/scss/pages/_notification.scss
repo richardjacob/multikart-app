@@ -11,12 +11,13 @@
     overflow-y: hidden;
     margin-bottom: 20px;
     li {
-        padding: 8px 22px;
         background-color: $grey-light-45;
         text-transform: capitalize;
         border-radius: 3px !important;
         margin-right: 15px;
         a {
+            padding: 8px 22px;
+            display: block;
             color: $title-color;
             white-space: nowrap;
         }

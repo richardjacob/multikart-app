@@ -119,3 +119,34 @@ section,
 .offcanvas, .modal-content {
     background-color: $white;
 }
+
+
+@media (min-width:767px) {
+    body {
+        max-width: 600px;
+        margin: 0 auto !important;
+    }
+    header {
+        max-width: 600px;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+    .bottom-panel {
+        ul {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+    .fixed-panel {
+        .row {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+    .cart-bottom {
+        > div {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+}

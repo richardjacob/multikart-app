@@ -180,6 +180,9 @@ header {
             font-weight: 700;
         }
     }
+    @media (max-width: 340px) {
+        width: 290px;
+    }
 }
 
 .sidebar-content {
